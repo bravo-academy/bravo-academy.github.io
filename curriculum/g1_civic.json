@@ -1,0 +1,28 @@
+{
+  "level": "g1",
+  "level_ar": "السنة الأولى أساسي",
+  "subject": "civic",
+  "subject_ar": "تربية مدنية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "أنا وتلاميذي",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "قواعد القسم",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "تحية العلم",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "النظام في الصف",
+      "status": "planned"
+    }
+  ]
+}

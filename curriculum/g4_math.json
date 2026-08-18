@@ -1,0 +1,38 @@
+{
+  "level": "g4",
+  "level_ar": "السنة الرابعة أساسي",
+  "subject": "math",
+  "subject_ar": "رياضيات",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الأعداد حتى المليون",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "الضرب في عدد من رقمين",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "القسمة الإقليدية",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "الكسور المتكافئة",
+      "status": "planned"
+    },
+    {
+      "id": "05",
+      "title": "الأعداد العشرية",
+      "status": "planned"
+    },
+    {
+      "id": "06",
+      "title": "مساحة المستطيل والمربع",
+      "status": "planned"
+    }
+  ]
+}

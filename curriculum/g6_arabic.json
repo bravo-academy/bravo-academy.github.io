@@ -1,0 +1,28 @@
+{
+  "level": "g6",
+  "level_ar": "السنة السادسة أساسي",
+  "subject": "arabic",
+  "subject_ar": "لغة عربية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الإعراب الأساسي",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "الأساليب: التعجب والاستفهام",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "النصوص الوظيفية",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "الإنتاج الكتابي: الحجاج البسيط",
+      "status": "planned"
+    }
+  ]
+}

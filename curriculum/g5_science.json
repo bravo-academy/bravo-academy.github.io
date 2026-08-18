@@ -1,0 +1,28 @@
+{
+  "level": "g5",
+  "level_ar": "السنة الخامسة أساسي",
+  "subject": "science",
+  "subject_ar": "إيقاظ علمي / تربية علمية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "التكاثر عند النبات",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "الدورة الدموية",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "الطاقة في حياتنا",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "البيئة وحمايتها",
+      "status": "planned"
+    }
+  ]
+}

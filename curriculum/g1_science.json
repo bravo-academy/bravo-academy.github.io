@@ -1,0 +1,28 @@
+{
+  "level": "g1",
+  "level_ar": "السنة الأولى أساسي",
+  "subject": "science",
+  "subject_ar": "إيقاظ علمي / تربية علمية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "حواسّي الخمس",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "النباتات من حولي",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "الحيوانات الأليفة",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "الماء في حياتنا",
+      "status": "planned"
+    }
+  ]
+}

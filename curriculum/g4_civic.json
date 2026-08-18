@@ -1,0 +1,23 @@
+{
+  "level": "g4",
+  "level_ar": "السنة الرابعة أساسي",
+  "subject": "civic",
+  "subject_ar": "تربية مدنية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "حقوق الطفل",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "المواطنة اليومية",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "المرافق العمومية",
+      "status": "planned"
+    }
+  ]
+}

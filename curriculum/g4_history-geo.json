@@ -1,0 +1,28 @@
+{
+  "level": "g4",
+  "level_ar": "السنة الرابعة أساسي",
+  "subject": "history-geo",
+  "subject_ar": "تاريخ وجغرافيا",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "تونس على الخريطة",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "الجهات والمناخ",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "تاريخ تونس القديم مبسّط",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "الرموز الوطنية",
+      "status": "planned"
+    }
+  ]
+}

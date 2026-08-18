@@ -1,0 +1,23 @@
+{
+  "level": "g2",
+  "level_ar": "السنة الثانية أساسي",
+  "subject": "civic",
+  "subject_ar": "تربية مدنية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "حقوقي وواجباتي في المدرسة",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "احترام الآخر",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "النظافة في الساحة",
+      "status": "planned"
+    }
+  ]
+}

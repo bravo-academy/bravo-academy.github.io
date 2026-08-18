@@ -1,0 +1,28 @@
+{
+  "level": "g4",
+  "level_ar": "السنة الرابعة أساسي",
+  "subject": "science",
+  "subject_ar": "إيقاظ علمي / تربية علمية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الهضم",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "التنقل عند الحيوان",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "الضوء والظل",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "المغانط",
+      "status": "planned"
+    }
+  ]
+}

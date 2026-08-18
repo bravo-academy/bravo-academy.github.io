@@ -1,0 +1,20 @@
+{
+  "title": "الدارة الكهربائية البسيطة",
+  "episode": "2",
+  "brand": "السنة الثالثة أساسي · إيقاظ علمي",
+  "level": "g3",
+  "subject": "science",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "الدارة الكهربائية البسيطة | إيقاظ علمي الثالثة", "tags": "كهرباء, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/02_s1.mp3", "image": "../img/02_s1.jpg", "caption": "من وين يجي الضو؟", "board_title": "مكونات",
+     "lines": [{"text": "بطارية + سلكان + مصباح", "style": "eq"}, {"text": "قاطعة", "style": "label"}],
+     "narration": "نصنع دارة بسيطة: بطارية صغيرة وسلكان وقاطعة ومصباح. كهرباء الدار خطيرة، نستخدم البطارية فقط."},
+    {"audio": "../audio/02_s2.mp3", "image": "../img/02_s1.jpg", "caption": "مغلقة أو مفتوحة", "board_title": "القاعدة",
+     "lines": [{"text": "مغلقة = يضيء", "style": "answer"}, {"text": "مفتوحة = ينطفئ", "style": "op"}],
+     "narration": "إذا أغلقت الدارة يضيء المصباح. إذا فتحنا القاطعة ينطفئ."},
+    {"audio": "../audio/02_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "تمرين",
+     "lines": [{"text": "ارسم دارة بمصباحين", "style": "ask"}],
+     "narration": "ارسموا دارة فيها مصباحان وشاركوها. ابتعدوا عن مقابس الدار. برافو!", "confetti": true}
+  ]
+}

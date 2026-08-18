@@ -1,0 +1,48 @@
+{
+  "level": "g3",
+  "level_ar": "السنة الثالثة أساسي",
+  "subject": "islamic",
+  "subject_ar": "تربية إسلامية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الصلاة وأوقاتها",
+<<<<<<< HEAD
+      "status": "ready"
+=======
+      "status": "ready",
+      "file": "levels/g3/islamic/lessons/01_salat.json"
+>>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
+    },
+    {
+      "id": "02",
+      "title": "الصدق والأمانة",
+<<<<<<< HEAD
+      "status": "planned"
+=======
+      "status": "ready",
+      "file": "levels/g3/islamic/lessons/02_sidq.json"
+>>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
+    },
+    {
+      "id": "03",
+      "title": "قصص الأنبياء: نوح",
+<<<<<<< HEAD
+      "status": "planned"
+=======
+      "status": "ready",
+      "file": "levels/g3/islamic/lessons/03_nuh.json"
+>>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
+    },
+    {
+      "id": "04",
+      "title": "آداب المسجد",
+<<<<<<< HEAD
+      "status": "planned"
+=======
+      "status": "ready",
+      "file": "levels/g3/islamic/lessons/04_masjid.json"
+>>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
+    }
+  ]
+}

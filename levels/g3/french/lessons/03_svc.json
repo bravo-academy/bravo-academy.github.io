@@ -1,0 +1,19 @@
+{
+  "title": "Sujet + verbe + complément",
+  "episode": "3",
+  "brand": "3e année · Français",
+  "level": "g3", "subject": "french",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "Sujet verbe complément | Français 3e", "tags": "grammaire, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/03_s1.mp3", "image": "../img/01_s2.jpg", "caption": "La règle d'or", "board_title": "S+V+C",
+     "lines": [{"text": "Qui ? + Fait quoi ? + Quoi ?", "style": "small"}],
+     "narration": "La phrase simple : sujet, verbe, complément."},
+    {"audio": "../audio/03_s2.mp3", "image": "../img/01_s2.jpg", "caption": "Exemple", "board_title": "Exemple",
+     "lines": [{"text": "Adam lit un livre.", "style": "eq"}],
+     "narration": "Adam lit un livre. Adam est le sujet, lit le verbe, un livre le complément."},
+    {"audio": "../audio/03_s3.mp3", "image": "../img/01_s3.jpg", "caption": "Bravo !", "board_title": "Quiz",
+     "lines": [{"text": "Inventez une phrase S+V+C", "style": "ask"}],
+     "narration": "Inventez une phrase avec sujet, verbe et complément. Bravo !", "confetti": true}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "احترام القانون في المدرسة",
+  "episode": "2",
+  "brand": "السنة الثالثة أساسي · تربية مدنية",
+  "level": "g3", "subject": "civic",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "احترام القانون في المدرسة | مدنية الثالثة", "tags": "قانون, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/02_s1.mp3", "image": "../img/01_s2.jpg", "caption": "النظام يحمي الجميع", "board_title": "قانون",
+     "lines": [{"text": "قواعد الصف للسلامة", "style": "eq"}],
+     "narration": "قواعد المدرسة تحمينا: لا ندفع في الممر، نرفع اليد قبل الكلام."},
+    {"audio": "../audio/02_s2.mp3", "image": "../img/01_s3.jpg", "caption": "حقوق وواجبات", "board_title": "توازن",
+     "lines": [{"text": "حق التعلم + واجب الاحترام", "style": "small"}],
+     "narration": "لنا حق التعلم وعلينا واجب احترام المعلم والرفاق."},
+    {"audio": "../audio/02_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "تمرين",
+     "lines": [{"text": "قاعدة تحبونها في قسمكم", "style": "ask"}],
+     "narration": "اذكروا قاعدة تحبونها في قسمكم ولماذا. برافو!", "confetti": true}
+  ]
+}

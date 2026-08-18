@@ -1,0 +1,20 @@
+{
+  "title": "تصريف الأفعال في الماضي والحاضر",
+  "episode": "2",
+  "brand": "السنة الثالثة أساسي · لغة عربية",
+  "level": "g3",
+  "subject": "arabic",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "تصريف الماضي والحاضر | عربية الثالثة", "tags": "صرف, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/02_s1.mp3", "image": "../img/01_s1.jpg", "caption": "أمس واليوم", "board_title": "زمن",
+     "lines": [{"text": "كتبَ / يكتبُ", "style": "eq"}],
+     "narration": "الفعل يتغير مع الزمن. كتبَ في الماضي، ويكتبُ في الحاضر."},
+    {"audio": "../audio/02_s2.mp3", "image": "../img/01_s2.jpg", "caption": "مع الضمائر", "board_title": "تصريف",
+     "lines": [{"text": "أنا أكتب · نحن نكتب", "style": "small"}, {"text": "هو يكتب · هي تكتب", "style": "small"}],
+     "narration": "أنا أكتب، نحن نكتب، هو يكتب، هي تكتب. لاحظوا أول حرف."},
+    {"audio": "../audio/02_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "تمرين",
+     "lines": [{"text": "صرّف: قرأ في الحاضر", "style": "ask"}],
+     "narration": "صرّفوا الفعل قرأ في الحاضر مع أنا وهو. برافو!", "confetti": true}
+  ]
+}

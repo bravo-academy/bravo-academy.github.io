@@ -1,0 +1,48 @@
+{
+  "level": "g3",
+  "level_ar": "السنة الثالثة أساسي",
+  "subject": "science",
+  "subject_ar": "إيقاظ علمي / تربية علمية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "التنفس والدوران ومخاطر التلوث",
+<<<<<<< HEAD
+      "status": "ready"
+=======
+      "status": "ready",
+      "file": "levels/g3/science/lessons/01_respiration.json"
+>>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
+    },
+    {
+      "id": "02",
+      "title": "الدارة الكهربائية البسيطة",
+<<<<<<< HEAD
+      "status": "planned"
+=======
+      "status": "ready",
+      "file": "levels/g3/science/lessons/02_circuit.json"
+>>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
+    },
+    {
+      "id": "03",
+      "title": "حالات المادة وتحولاتها",
+<<<<<<< HEAD
+      "status": "planned"
+=======
+      "status": "ready",
+      "file": "levels/g3/science/lessons/03_matter.json"
+>>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
+    },
+    {
+      "id": "04",
+      "title": "التغذية والصحة",
+<<<<<<< HEAD
+      "status": "planned"
+=======
+      "status": "ready",
+      "file": "levels/g3/science/lessons/04_food.json"
+>>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
+    }
+  ]
+}

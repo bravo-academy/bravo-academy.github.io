@@ -1,0 +1,20 @@
+{
+  "title": "الصلاة وأوقاتها",
+  "episode": "1",
+  "brand": "السنة الثالثة أساسي · تربية إسلامية",
+  "level": "g3",
+  "subject": "islamic",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "الصلاة وأوقاتها | تربية إسلامية الثالثة أساسي", "tags": "تربية إسلامية, صلاة, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/01_s1.mp3", "image": "../img/01_s1.jpg", "caption": "خمس صلوات", "board_title": "الفرائض",
+     "lines": [{"text": "الصبح · الظهر · العصر", "style": "eq"}, {"text": "المغرب · العشاء", "style": "small"}],
+     "narration": "الصلاة عماد الدين. خمس صلوات في اليوم: الصبح والظهر والعصر والمغرب والعشاء."},
+    {"audio": "../audio/01_s2.mp3", "image": "../img/01_s2.jpg", "caption": "الطهارة أولاً", "board_title": "الوضوء",
+     "lines": [{"text": "نتوضأ قبل الصلاة", "style": "eq"}, {"text": "الماء الطاهر", "style": "label"}],
+     "narration": "قبل الصلاة نتوضأ بماء طاهر. الوضوء ينظف الجسم ويُهيّئ القلب."},
+    {"audio": "../audio/01_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "تمرين",
+     "lines": [{"text": "سمّ الصلوات الخمس", "style": "ask"}],
+     "narration": "تمرين الدار: سمّوا الصلوات الخمس بالترتيب. برافو!", "confetti": true}
+  ]
+}

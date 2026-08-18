@@ -1,0 +1,19 @@
+{
+  "title": "الصدق والأمانة",
+  "episode": "2",
+  "brand": "السنة الثالثة أساسي · تربية إسلامية",
+  "level": "g3", "subject": "islamic",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "الصدق والأمانة | إسلامية الثالثة", "tags": "صدق, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/02_s1.mp3", "image": "../img/01_s2.jpg", "caption": "نقول الحق", "board_title": "صدق",
+     "lines": [{"text": "الصدق ينجي", "style": "eq"}],
+     "narration": "الصدق أن نقول الحق ولو كان صعبا. الصدق ينجي."},
+    {"audio": "../audio/02_s2.mp3", "image": "../img/01_s3.jpg", "caption": "نحفظ الأمانة", "board_title": "أمانة",
+     "lines": [{"text": "نرد ما استُودعناه", "style": "small"}],
+     "narration": "الأمانة أن نحفظ ما يضعه الناس عندنا ونردّه."},
+    {"audio": "../audio/02_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "تمرين",
+     "lines": [{"text": "مثال صدق من يومك", "style": "ask"}],
+     "narration": "احكوا مثالا للصدق من يومكم. برافو!", "confetti": true}
+  ]
+}

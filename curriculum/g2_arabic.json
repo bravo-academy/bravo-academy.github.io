@@ -1,0 +1,28 @@
+{
+  "level": "g2",
+  "level_ar": "السنة الثانية أساسي",
+  "subject": "arabic",
+  "subject_ar": "لغة عربية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "القراءة الجهرية",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "التنوين والشدة",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "الجملة المفيدة",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "التعبير الكتابي القصير",
+      "status": "planned"
+    }
+  ]
+}
