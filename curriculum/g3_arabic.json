@@ -7,42 +7,26 @@
     {
       "id": "01",
       "title": "الجملة الفعلية والجملة الاسمية",
-<<<<<<< HEAD
-      "status": "ready"
-=======
       "status": "ready",
       "file": "levels/g3/arabic/lessons/01_jumla.json"
->>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
     },
     {
       "id": "02",
       "title": "تصريف الأفعال في الماضي والحاضر",
-<<<<<<< HEAD
-      "status": "planned"
-=======
       "status": "ready",
       "file": "levels/g3/arabic/lessons/02_sarf.json"
->>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
     },
     {
       "id": "03",
       "title": "علامات الترقيم والإنتاج الكتابي",
-<<<<<<< HEAD
-      "status": "planned"
-=======
       "status": "ready",
       "file": "levels/g3/arabic/lessons/03_punct.json"
->>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
     },
     {
       "id": "04",
       "title": "النعت والإضافة التمهيدية",
-<<<<<<< HEAD
-      "status": "planned"
-=======
       "status": "ready",
       "file": "levels/g3/arabic/lessons/04_naat.json"
->>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
     }
   ]
 }

@@ -7,42 +7,26 @@
     {
       "id": "01",
       "title": "الأعداد ذات 4 و5 أرقام حتى 99 999",
-<<<<<<< HEAD
-      "status": "ready"
-=======
       "status": "ready",
       "file": "levels/g3/math/lessons/01_numbers.json"
->>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
     },
     {
       "id": "02",
       "title": "الجمع بالاحتفاظ والطرح بالاستعارة",
-<<<<<<< HEAD
-      "status": "ready"
-=======
       "status": "ready",
       "file": "levels/g3/math/lessons/02_ops.json"
->>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
     },
     {
       "id": "03",
       "title": "التوازي والتعامد ومحيط المستطيل",
-<<<<<<< HEAD
-      "status": "ready"
-=======
       "status": "ready",
       "file": "levels/g3/math/lessons/03_geo.json"
->>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
     },
     {
       "id": "04",
       "title": "جدول الضرب والتمهيد للقسمة",
-<<<<<<< HEAD
-      "status": "ready"
-=======
       "status": "ready",
       "file": "levels/g3/math/lessons/04_mult.json"
->>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
     },
     {
       "id": "05",

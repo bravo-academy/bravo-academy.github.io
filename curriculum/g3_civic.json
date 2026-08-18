@@ -7,32 +7,20 @@
     {
       "id": "01",
       "title": "الهوية التونسية",
-<<<<<<< HEAD
-      "status": "ready"
-=======
       "status": "ready",
       "file": "levels/g3/civic/lessons/01_identity.json"
->>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
     },
     {
       "id": "02",
       "title": "احترام القانون في المدرسة",
-<<<<<<< HEAD
-      "status": "planned"
-=======
       "status": "ready",
       "file": "levels/g3/civic/lessons/02_law.json"
->>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
     },
     {
       "id": "03",
       "title": "التعاون والعمل الجماعي",
-<<<<<<< HEAD
-      "status": "planned"
-=======
       "status": "ready",
       "file": "levels/g3/civic/lessons/03_coop.json"
->>>>>>> 475d87b (feat: دروس g3 لكل المواد + تعليق صوتي للحلقات الأولى + رندر)
     }
   ]
 }
