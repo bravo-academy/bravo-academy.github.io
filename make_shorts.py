@@ -28,10 +28,19 @@ def main():
     d.rounded_rectangle((40, 80, w - 40, 280), 30, fill=(255, 199, 44), outline=(30, 34, 44), width=6)
     f = ImageFont.truetype(str(FONTS / "NotoKufiArabic.ttf"), 48)
     d.text((w // 2, 180), ar(data.get("title", "")), font=f, fill=(30, 34, 44), anchor="mm")
-    photo = lesson.parent.parent / sc.get("image", "").replace("../", "")
-    if not photo.exists() and sc.get("image"):
-        photo = (lesson.parent / sc["image"]).resolve()
-    if photo.exists():
+    # حلّ مسار الصورة بمرونة (يدعم ../img/.. أو مسار نسبي)
+    raw_img = sc.get("image", "")
+    photo = None
+    if raw_img:
+        candidate = (lesson.parent / raw_img).resolve()
+        if candidate.exists():
+            photo = candidate
+        else:
+            # fallback للتوافق مع البناء القديم: levels/g3/<subject>/img/..
+            alt = (lesson.parent.parent / raw_img.replace("../", "")).resolve()
+            if alt.exists():
+                photo = alt
+    if photo and photo.exists():
         ph = Image.open(photo).convert("RGB").resize((900, 700), Image.LANCZOS)
         img.paste(ph, (90, 340))
     y = 1120
@@ -46,9 +55,11 @@ def main():
     out = lesson.parent.parent / "out" / "shorts" / f"{lesson.stem}_short.mp4"
     out.parent.mkdir(parents=True, exist_ok=True)
     ff = imageio_ffmpeg.get_ffmpeg_exe()
-    audio = lesson.parent / sc.get("audio", "")
+    raw_audio = sc.get("audio", "")
+    audio = (lesson.parent / raw_audio).resolve() if raw_audio else None
+    has_audio = audio and audio.exists()
     cmd = [ff, "-y", "-loop", "1", "-i", str(tmp), "-t", "12", "-vf", "format=yuv420p", "-c:v", "libx264"]
-    if audio.exists():
+    if has_audio:
         cmd = [ff, "-y", "-loop", "1", "-i", str(tmp), "-i", str(audio), "-shortest", "-vf", "format=yuv420p", "-c:v", "libx264", "-c:a", "aac"]
     cmd.append(str(out))
     subprocess.check_call(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
