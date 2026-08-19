@@ -1,0 +1,11 @@
+1
+00:00:00,000 --> 00:00:04,000
+On dit bonjour le matin, bonsoir le soir, et salut à un ami.
+
+2
+00:00:04,000 --> 00:00:08,000
+S'il te plaît, merci, au revoir. La politesse, c'est important.
+
+3
+00:00:08,000 --> 00:00:12,000
+Saluez un ami en français dans les commentaires. Bravo !

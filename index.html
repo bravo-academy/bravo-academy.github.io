@@ -3,120 +3,415 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>برافو أكاديمي · استوديو المستويات</title>
+<title>برافو أكاديمي · استوديو المستويات والنشر</title>
 <link rel="icon" href="assets/brand/logo_bravo.png">
 <style>
-  :root{--ink:#1e222c;--paper:#faf7f0;--blue:#2463eb;--blue-d:#17419c;--coral:#eb574a;--sun:#ffc72c;--green:#22a860;--teal:#108a8d;--grid:#e9e3d6}
+  :root{
+    --ink:#1e222c;
+    --paper:#faf7f0;
+    --blue:#2463eb;
+    --blue-d:#17419c;
+    --coral:#eb574a;
+    --sun:#ffc72c;
+    --green:#22a860;
+    --teal:#108a8d;
+    --grid:#e9e3d6;
+  }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:linear-gradient(180deg,rgba(36,99,235,.07),transparent 240px),repeating-linear-gradient(0deg,transparent 0 63px,var(--grid) 63px 64px),var(--paper);color:var(--ink)}
-  header{text-align:center;padding:28px 16px 8px}
+  body{
+    font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+    background:linear-gradient(180deg,rgba(36,99,235,.07),transparent 240px),repeating-linear-gradient(0deg,transparent 0 63px,var(--grid) 63px 64px),var(--paper);
+    color:var(--ink);
+    min-height:100vh;
+  }
+  header{text-align:center;padding:28px 16px 12px}
   header img{width:96px;height:96px;border-radius:50%;border:4px solid var(--ink);box-shadow:5px 5px 0 var(--ink);object-fit:cover;background:#fff}
   .badge{display:inline-block;background:var(--coral);color:#fff;font-weight:800;padding:5px 14px;border-radius:40px;border:3px solid var(--ink);margin:12px 0}
   h1{display:inline-block;background:var(--sun);padding:8px 22px;border:4px solid var(--ink);border-radius:50px;box-shadow:5px 5px 0 var(--ink);font-size:clamp(1.3rem,3vw,2rem)}
-  .brand-id{max-width:1100px;margin:16px auto;background:#eef4ff;border:2px dashed #1f4e8c;border-radius:14px;padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px 20px;font-size:.9rem}
+  
+  .brand-id{
+    max-width:1100px;margin:16px auto;background:#eef4ff;border:2px dashed #1f4e8c;border-radius:14px;padding:12px 16px;
+    display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 20px;font-size:.92rem;
+  }
+  .brand-id .info-group{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center}
+  .brand-id a{color:var(--blue-d);font-weight:700;text-decoration:none}
+  .brand-id a:hover{text-decoration:underline}
+
   .tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:10px}
-  .tab{cursor:pointer;font-weight:800;padding:10px 16px;border:3px solid var(--ink);border-radius:16px;background:#fff;box-shadow:3px 3px 0 var(--ink)}
+  .tab{cursor:pointer;font-weight:800;padding:10px 18px;border:3px solid var(--ink);border-radius:16px;background:#fff;box-shadow:3px 3px 0 var(--ink);transition:all .15s}
+  .tab:hover{transform:translateY(-2px)}
   .tab.on{background:var(--blue);color:#fff}
+
+  .stats-bar{max-width:1100px;margin:10px auto;background:#fff;border:3px solid var(--ink);border-radius:16px;padding:12px 20px;box-shadow:4px 4px 0 var(--ink);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  .stats-bar h2{font-size:1.1rem;color:var(--ink)}
+
   main{max-width:1100px;margin:0 auto;padding:10px 16px 80px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-  .card{background:#fff;border:4px solid var(--ink);border-radius:20px;padding:16px;box-shadow:6px 6px 0 rgba(30,34,44,.8)}
-  .card h3{margin-bottom:8px}
-  .bar{height:10px;background:#eee;border:2px solid var(--ink);border-radius:8px;overflow:hidden;margin:8px 0}
-  .bar>i{display:block;height:100%;background:var(--green)}
-  .lesson{border-top:2px dashed var(--grid);padding:8px 0;font-size:.92rem}
-  .ok{color:var(--green);font-weight:800}
-  .plan{color:#888}
-  table{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:10px}
-  th,td{border:2px solid var(--ink);padding:8px;text-align:right}
-  th{background:var(--sun)}
-  a.btn{display:inline-block;margin-top:8px;background:var(--teal);color:#fff;text-decoration:none;font-weight:800;padding:8px 14px;border-radius:12px;border:3px solid var(--ink)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+  .card{background:#fff;border:4px solid var(--ink);border-radius:20px;padding:18px;box-shadow:6px 6px 0 rgba(30,34,44,.8)}
+  .card h3{margin-bottom:8px;font-size:1.25rem;display:flex;justify-content:space-between;align-items:center}
+  
+  .bar{height:12px;background:#eee;border:2px solid var(--ink);border-radius:8px;overflow:hidden;margin:10px 0 14px}
+  .bar>i{display:block;height:100%;background:var(--green);transition:width .3s}
+
+  .lesson-item{border-top:2px dashed var(--grid);padding:12px 0}
+  .lesson-header{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+  .lesson-title{font-weight:700;font-size:.95rem}
+  .ok-tag{background:var(--green);color:#fff;font-size:.75rem;padding:3px 8px;border-radius:20px;font-weight:800;border:1.5px solid var(--ink)}
+  .plan-tag{background:#aaa;color:#fff;font-size:.75rem;padding:3px 8px;border-radius:20px;font-weight:800;border:1.5px solid var(--ink)}
+
+  .action-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .btn{
+    cursor:pointer;display:inline-flex;align-items:center;gap:4px;background:var(--teal);color:#fff;
+    text-decoration:none;font-weight:700;font-size:.82rem;padding:6px 12px;border-radius:10px;border:2px solid var(--ink);
+    box-shadow:2px 2px 0 var(--ink);transition:all .15s;
+  }
+  .btn:hover{transform:translateY(-1px);box-shadow:3px 3px 0 var(--ink)}
+  .btn-short{background:var(--coral)}
+  .btn-pub{background:var(--sun);color:var(--ink)}
+
+  /* Modal Overlay */
+  .modal-bg{
+    display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+    background:rgba(30,34,44,.75);backdrop-filter:blur(4px);z-index:9999;
+    justify-content:center;align-items:center;padding:16px;
+  }
+  .modal-bg.active{display:flex}
+  .modal{
+    background:#fff;border:4px solid var(--ink);border-radius:24px;width:100%;max-width:760px;
+    max-height:90vh;overflow-y:auto;box-shadow:8px 8px 0 var(--ink);padding:24px;position:relative;
+  }
+  .modal-close{
+    position:absolute;top:16px;left:16px;background:var(--coral);color:#fff;border:3px solid var(--ink);
+    width:36px;height:36px;border-radius:50%;font-weight:900;font-size:1.1rem;cursor:pointer;display:grid;place-items:center;
+  }
+  .modal-close:hover{background:#d43f32}
+
+  video{width:100%;border:3px solid var(--ink);border-radius:14px;background:#000;margin-top:12px}
+
+  .pub-tabs{display:flex;gap:8px;margin:16px 0;border-bottom:3px solid var(--ink);padding-bottom:8px}
+  .pub-tab{
+    cursor:pointer;padding:8px 16px;font-weight:800;border:2px solid var(--ink);border-radius:12px;
+    background:#f0f0f0;color:var(--ink);box-shadow:2px 2px 0 var(--ink);
+  }
+  .pub-tab.active{background:var(--blue);color:#fff}
+
+  .field-group{margin-bottom:14px}
+  .field-group label{display:block;font-weight:800;margin-bottom:4px;font-size:.9rem}
+  .field-row{display:flex;gap:8px}
+  .field-row input, .field-row textarea{
+    flex:1;padding:8px 12px;border:2px solid var(--ink);border-radius:10px;font-family:inherit;font-size:.88rem;background:#fafafa;
+  }
+  .field-row textarea{height:90px;resize:vertical}
+  .copy-btn{
+    background:var(--green);color:#fff;border:2px solid var(--ink);border-radius:10px;padding:0 12px;
+    font-weight:800;cursor:pointer;box-shadow:2px 2px 0 var(--ink);white-space:nowrap;display:inline-flex;align-items:center;
+  }
+  .copy-btn:hover{background:#1b8f51}
+
+  /* Toast Notification */
+  #toast{
+    position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
+    background:var(--ink);color:var(--sun);padding:10px 22px;border-radius:30px;
+    font-weight:800;border:3px solid var(--sun);box-shadow:0 6px 20px rgba(0,0,0,.3);
+    z-index:10000;display:none;
+  }
 </style>
 </head>
 <body>
+
 <header>
   <img src="assets/brand/logo_bravo.png" alt="برافو أكاديمي">
   <div><span class="badge">@BravoAcademyTN · 🇹🇳 · مصنوع للأطفال ✅</span></div>
   <h1>برافو أكاديمي · Bravo Academy</h1>
-  <p style="margin-top:10px;font-weight:600;color:var(--blue-d)">مستوى ← مادة ← حلقة · البرنامج الرسمي · السنة 1→6</p>
+  <p style="margin-top:10px;font-weight:700;color:var(--blue-d)">استوديو النشر والمحتوى الرقمي · البرنامج التونسي الرسمي (السنة 1 → 6 أساسي)</p>
 </header>
+
 <div class="brand-id">
-  <span><b>الاسم:</b> برافو أكاديمي – Bravo Academy</span>
-  <span><b>المعرف:</b> @BravoAcademyTN</span>
-  <a href="CHANNEL.md">CHANNEL.md</a>
-  <a href="SCHEDULE.md">SCHEDULE.md</a>
-  <a href="BRAVO_PROJECT_PROMPT.md">القاعدة</a>
+  <div class="info-group">
+    <span><b>الاسم:</b> برافو أكاديمي – Bravo Academy</span>
+    <span><b>المعرف:</b> @BravoAcademyTN</span>
+    <span><b>البلد:</b> 🇹🇳 تونس</span>
+  </div>
+  <div class="info-group">
+    <a href="CHANNEL.md" target="_blank">📺 CHANNEL.md</a>
+    <a href="SCHEDULE.md" target="_blank">📅 SCHEDULE.md</a>
+    <a href="catalog.json" target="_blank">📄 catalog.json</a>
+  </div>
 </div>
+
 <div class="tabs" id="tabs"></div>
+
+<div class="stats-bar">
+  <h2 id="level-title">السنة الثالثة أساسي</h2>
+  <div id="level-progress" style="font-weight:800;color:var(--teal)"></div>
+</div>
+
 <main>
   <div id="subjects" class="grid"></div>
-  <section class="card" style="margin-top:22px">
-    <h3>📅 رزنامة يومية</h3>
-    <table>
-      <tr><th>اليوم</th><th>المادة</th></tr>
-      <tr><td>الأحد</td><td>رياضيات</td></tr>
-      <tr><td>الإثنين</td><td>لغة عربية</td></tr>
-      <tr><td>الثلاثاء</td><td>إيقاظ علمي</td></tr>
-      <tr><td>الأربعاء</td><td>فرنسية (من g3)</td></tr>
-      <tr><td>الخميس</td><td>إسلامية + مدنية</td></tr>
-      <tr><td>الجمعة</td><td>تاريخ وجغرافيا (من g4)</td></tr>
-      <tr><td>السبت</td><td>مراجعة + كويز</td></tr>
-    </table>
-  </section>
 </main>
-<script>
-const LEVELS = [
-  {id:'g1', ar:'السنة 1'}, {id:'g2', ar:'السنة 2'}, {id:'g3', ar:'السنة 3'},
-  {id:'g4', ar:'السنة 4'}, {id:'g5', ar:'السنة 5'}, {id:'g6', ar:'السنة 6'}
-];
-const SUBS = {
-  math:'رياضيات', arabic:'لغة عربية', science:'إيقاظ علمي',
-  french:'فرنسية', islamic:'إسلامية', civic:'مدنية', 'history-geo':'تاريخ وجغرافيا'
-};
-const HAS = {
-  g1:['arabic','math','science','islamic','civic'],
-  g2:['arabic','math','science','islamic','civic'],
-  g3:['arabic','math','science','french','islamic','civic'],
-  g4:['arabic','math','science','french','islamic','civic','history-geo'],
-  g5:['arabic','math','science','french','islamic','civic','history-geo'],
-  g6:['arabic','math','science','french','islamic','civic','history-geo']
-};
-let current='g3';
-const cache={};
 
-async function load(g,s){
-  const k=g+'_'+s;
-  if(cache[k]) return cache[k];
-  const r=await fetch('curriculum/'+k+'.json');
-  if(!r.ok) return null;
-  cache[k]=await r.json();
-  return cache[k];
+<!-- Video Player Modal -->
+<div class="modal-bg" id="video-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('video-modal')">✕</button>
+    <h3 id="video-modal-title" style="margin-bottom:8px">مشاهدة الحلقة</h3>
+    <video id="video-player" controls autoplay></video>
+  </div>
+</div>
+
+<!-- Publishing Settings Modal -->
+<div class="modal-bg" id="pub-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('pub-modal')">✕</button>
+    <h3 id="pub-modal-title" style="margin-bottom:6px">📢 إعدادات النشر للتصدير</h3>
+    <p style="font-size:.85rem;color:#555">انسخ البيانات الجاهزة للتنزيل والنشر مباشرة على يوتيوب وفيسبوك.</p>
+    
+    <div class="pub-tabs">
+      <button class="pub-tab active" id="tab-yt-btn" onclick="switchPubTab('yt')">🔴 يوتيوب (YouTube)</button>
+      <button class="pub-tab" id="tab-fb-btn" onclick="switchPubTab('fb')">🔵 فيسبوك (Facebook)</button>
+    </div>
+
+    <!-- YouTube View -->
+    <div id="pub-yt-view">
+      <div class="field-group">
+        <label>عنوان الحلقة (YouTube Title):</label>
+        <div class="field-row">
+          <input type="text" id="yt-title-input" readonly>
+          <button class="copy-btn" onclick="copyField('yt-title-input')">📋 نسخ</button>
+        </div>
+      </div>
+      <div class="field-group">
+        <label>الوصف الشامل (Description):</label>
+        <div class="field-row">
+          <textarea id="yt-desc-input" readonly></textarea>
+          <button class="copy-btn" onclick="copyField('yt-desc-input')">📋 نسخ</button>
+        </div>
+      </div>
+      <div class="field-group">
+        <label>الكلمات المفتاحية (Tags):</label>
+        <div class="field-row">
+          <input type="text" id="yt-tags-input" readonly>
+          <button class="copy-btn" onclick="copyField('yt-tags-input')">📋 نسخ</button>
+        </div>
+      </div>
+      <div class="field-group">
+        <label>ملف الترجمة والنسخ النصي (SRT Subtitles):</label>
+        <div class="field-row">
+          <textarea id="yt-srt-input" readonly></textarea>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <button class="copy-btn" onclick="copyField('yt-srt-input')">📋 نسخ النص</button>
+            <a id="srt-download-btn" class="copy-btn" style="background:var(--blue);text-decoration:none;justify-content:center" download>⬇️ تحميل SRT</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Facebook View -->
+    <div id="pub-fb-view" style="display:none">
+      <div class="field-group">
+        <label>عنوان المنشور (FB Post Title):</label>
+        <div class="field-row">
+          <input type="text" id="fb-title-input" readonly>
+          <button class="copy-btn" onclick="copyField('fb-title-input')">📋 نسخ</button>
+        </div>
+      </div>
+      <div class="field-group">
+        <label>نص المنشور (FB Post Description):</label>
+        <div class="field-row">
+          <textarea id="fb-desc-input" readonly></textarea>
+          <button class="copy-btn" onclick="copyField('fb-desc-input')">📋 نسخ</button>
+        </div>
+      </div>
+      <div class="field-group">
+        <label>الهاشتاغات (Hashtags):</label>
+        <div class="field-row">
+          <input type="text" id="fb-tags-input" readonly>
+          <button class="copy-btn" onclick="copyField('fb-tags-input')">📋 نسخ</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="toast">تم النسخ بنجاح! 📋</div>
+
+<script>
+let CATALOG = null;
+let currentLevel = 'g3';
+
+async function init(){
+  try {
+    const res = await fetch('catalog.json');
+    if(res.ok){
+      CATALOG = await res.json();
+    }
+  } catch(e){
+    console.error("Catalog fetch error:", e);
+  }
+  renderTabs();
+  renderLevel();
 }
 
-function tabs(){
-  document.getElementById('tabs').innerHTML=LEVELS.map(l=>
-    `<button class="tab ${l.id===current?'on':''}" onclick="sel('${l.id}')">${l.ar}</button>`
+function renderTabs(){
+  const levels = CATALOG ? CATALOG.levels : [
+    {id:'g1', title_ar:'السنة الأولى'},
+    {id:'g2', title_ar:'السنة الثانية'},
+    {id:'g3', title_ar:'السنة الثالثة'},
+    {id:'g4', title_ar:'السنة الرابعة'},
+    {id:'g5', title_ar:'السنة الخامسة'},
+    {id:'g6', title_ar:'السنة السادسة'}
+  ];
+  document.getElementById('tabs').innerHTML = levels.map(l =>
+    `<button class="tab ${l.id===currentLevel?'on':''}" onclick="selectLevel('${l.id}')">${l.title_ar}</button>`
   ).join('');
 }
-async function sel(g){ current=g; tabs(); await render(); }
 
-async function render(){
-  const box=document.getElementById('subjects');
-  box.innerHTML='…';
-  const cards=[];
-  for(const s of HAS[current]){
-    const data=await load(current,s);
-    if(!data) continue;
-    const n=data.lessons.length;
-    const done=data.lessons.filter(x=>x.status==='ready').length;
-    const pct=Math.round(100*done/n);
-    const list=data.lessons.map(x=>`<div class="lesson"><b>${x.id}.</b> ${x.title} ${x.status==='ready'?'<span class="ok">منجز</span>':'<span class="plan">متبقّي</span>'}</div>`).join('');
-    cards.push(`<article class="card"><h3>${SUBS[s]}</h3>
-      <div class="bar"><i style="width:${pct}%"></i></div>
-      <p>${done} / ${n} دروس</p>${list}</article>`);
-  }
-  box.innerHTML=cards.join('');
+function selectLevel(id){
+  currentLevel = id;
+  renderTabs();
+  renderLevel();
 }
-tabs(); render();
+
+function renderLevel(){
+  if(!CATALOG) return;
+  const lvl = CATALOG.levels.find(l => l.id === currentLevel);
+  if(!lvl) return;
+
+  document.getElementById('level-title').innerText = lvl.title_ar + " أساسي";
+
+  let totalLessons = 0;
+  let readyLessons = 0;
+
+  const subjectsBox = document.getElementById('subjects');
+  subjectsBox.innerHTML = lvl.subjects.map(sub => {
+    const total = sub.lessons.length;
+    const ready = sub.lessons.filter(l => l.status === 'ready').length;
+    totalLessons += total;
+    readyLessons += ready;
+
+    const pct = total > 0 ? Math.round((ready / total) * 100) : 0;
+
+    const lessonsHtml = sub.lessons.map(l => {
+      const isReady = l.status === 'ready';
+      return `
+        <div class="lesson-item">
+          <div class="lesson-header">
+            <span class="lesson-title"><b>الدرس ${l.id}:</b> ${l.title}</span>
+            <span class="${isReady ? 'ok-tag' : 'plan-tag'}">${isReady ? 'منجز ✅' : 'متبقّي ⏳'}</span>
+          </div>
+          ${isReady ? `
+            <div class="action-btns">
+              <button class="btn" onclick="playVideo('${escapeJs(l.title)}', '${escapeJs(l.video_url)}')">🎬 مشاهدة الفيديو</button>
+              ${l.short_url ? `<button class="btn btn-short" onclick="playVideo('${escapeJs(l.title)} (Short)', '${escapeJs(l.short_url)}')">📱 Short</button>` : ''}
+              <button class="btn btn-pub" onclick="openPubModal('${lvl.id}', '${sub.id}', '${l.id}')">📢 إعدادات النشر</button>
+            </div>
+          ` : ''}
+        </div>
+      `;
+    }).join('');
+
+    return `
+      <article class="card">
+        <h3><span>${sub.title_ar}</span> <small style="font-size:.85rem;color:var(--blue-d)">${ready} / ${total}</small></h3>
+        <div class="bar"><i style="width:${pct}%"></i></div>
+        <div>${lessonsHtml}</div>
+      </article>
+    `;
+  }).join('');
+
+  document.getElementById('level-progress').innerText = `إجمالي المنجز: ${readyLessons} من ${totalLessons} حلقة (${Math.round((readyLessons/totalLessons)*100)}%)`;
+}
+
+function escapeJs(str){
+  return (str || '').replace(/'/g, "\\'").replace(/"/g, "&quot;");
+}
+
+function playVideo(title, url){
+  document.getElementById('video-modal-title').innerText = title;
+  const player = document.getElementById('video-player');
+  player.src = url;
+  document.getElementById('video-modal').classList.add('active');
+}
+
+function closeModal(id){
+  document.getElementById(id).classList.remove('active');
+  if(id === 'video-modal'){
+    const player = document.getElementById('video-player');
+    player.pause();
+    player.src = '';
+  }
+}
+
+let activePubLesson = null;
+
+function openPubModal(lvlId, subId, lessonId){
+  const lvl = CATALOG.levels.find(l => l.id === lvlId);
+  const sub = lvl ? lvl.subjects.find(s => s.id === subId) : null;
+  const lesson = sub ? sub.lessons.find(l => l.id === lessonId) : null;
+
+  if(!lesson) return;
+  activePubLesson = lesson;
+
+  document.getElementById('pub-modal-title').innerText = `📢 إعدادات النشر: ${lesson.title}`;
+
+  // YouTube
+  document.getElementById('yt-title-input').value = lesson.youtube.title || '';
+  document.getElementById('yt-desc-input').value = lesson.youtube.description || '';
+  document.getElementById('yt-tags-input').value = lesson.youtube.tags || '';
+  document.getElementById('yt-srt-input').value = lesson.srt_content || '';
+
+  const srtBtn = document.getElementById('srt-download-btn');
+  if(lesson.srt_url){
+    srtBtn.href = lesson.srt_url;
+    srtBtn.style.display = 'inline-flex';
+  } else {
+    srtBtn.style.display = 'none';
+  }
+
+  // Facebook
+  document.getElementById('fb-title-input').value = lesson.facebook.title || '';
+  document.getElementById('fb-desc-input').value = lesson.facebook.description || '';
+  document.getElementById('fb-tags-input').value = lesson.facebook.tags || '';
+
+  switchPubTab('yt');
+  document.getElementById('pub-modal').classList.add('active');
+}
+
+function switchPubTab(type){
+  if(type === 'yt'){
+    document.getElementById('tab-yt-btn').classList.add('active');
+    document.getElementById('tab-fb-btn').classList.remove('active');
+    document.getElementById('pub-yt-view').style.display = 'block';
+    document.getElementById('pub-fb-view').style.display = 'none';
+  } else {
+    document.getElementById('tab-fb-btn').classList.add('active');
+    document.getElementById('tab-yt-btn').classList.remove('active');
+    document.getElementById('pub-yt-view').style.display = 'none';
+    document.getElementById('pub-fb-view').style.display = 'block';
+  }
+}
+
+function copyField(elementId){
+  const el = document.getElementById(elementId);
+  if(!el) return;
+  el.select();
+  navigator.clipboard.writeText(el.value).then(() => {
+    showToast('تم النسخ إلى الحافظة بنجاح! 📋');
+  }).catch(() => {
+    document.execCommand('copy');
+    showToast('تم النسخ إلى الحافظة! 📋');
+  });
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.innerText = msg;
+  t.style.display = 'block';
+  setTimeout(() => { t.style.display = 'none'; }, 2200);
+}
+
+window.onload = init;
 </script>
 </body>
 </html>

@@ -31,12 +31,14 @@
     {
       "id": "05",
       "title": "الكسور البسيطة",
-      "status": "planned"
+      "status": "ready",
+      "file": "levels/g3/math/lessons/05_fractions.json"
     },
     {
       "id": "06",
       "title": "قياس الأطوال والكتل",
-      "status": "planned"
+      "status": "ready",
+      "file": "levels/g3/math/lessons/06_measures.json"
     }
   ]
 }

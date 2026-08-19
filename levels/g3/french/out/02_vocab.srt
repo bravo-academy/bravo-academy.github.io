@@ -1,0 +1,11 @@
+1
+00:00:00,000 --> 00:00:04,000
+Aujourd'hui le vocabulaire de la maison : une table, une chaise, une porte.
+
+2
+00:00:04,000 --> 00:00:08,000
+Je construis une phrase : J'ouvre la porte. Je m'assieds sur la chaise.
+
+3
+00:00:08,000 --> 00:00:12,000
+Trouvez trois objets de votre chambre en français. Bravo !
