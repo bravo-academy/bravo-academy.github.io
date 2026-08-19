@@ -23,20 +23,25 @@ MASCOT_GAP = 140
 # extra bottom safe zone for watermark
 BOTTOM_SAFE = 140
 STYLES = {
-    "eq": dict(fill=INK, size=56),
-    "op": dict(fill=CORAL, size=50),
-    "ask": dict(fill=(124, 92, 214), size=44),
-    "answer": dict(fill=GREEN, size=50),
-    "label": dict(fill=TEAL, size=34),
-    "small": dict(fill=INK, size=36),
+    "eq": dict(fill=INK, size=62),
+    "op": dict(fill=CORAL, size=54),
+    "ask": dict(fill=(124, 92, 214), size=50),
+    "answer": dict(fill=GREEN, size=56),
+    "label": dict(fill=TEAL, size=40),
+    "small": dict(fill=INK, size=42),
 }
 
 def ar(t: str) -> str:
-    s=str(t)
-    # if contains Arabic, reshape
-    if any("\u0600" <= c <= "\u06FF" for c in s):
-        return get_display(arabic_reshaper.reshape(s))
-    return s
+    return str(t)
+
+def is_arabic(s: str) -> bool:
+    return any("\u0600" <= c <= "\u06FF" for c in s)
+
+def draw_text(draw, xy, text, font, fill, anchor="mm"):
+    if is_arabic(str(text)):
+        draw.text(xy, str(text), font=font, fill=fill, anchor=anchor, direction="rtl", language="ar", features=["liga"])
+    else:
+        draw.text(xy, str(text), font=font, fill=fill, anchor=anchor)
 
 def vfont(name: str, size: int, wght: int = 700) -> ImageFont.FreeTypeFont:
     f = ImageFont.truetype(str(FONTS / name), size)
@@ -126,10 +131,10 @@ def draw_scene_partial(lesson, scene, visible, w, h):
         d.line([(0,y),(w,y)], fill=(233,227,214))
     # top bar
     d.rounded_rectangle((24,18,w-24,100),28,fill=SUN, outline=INK, width=4)
-    title=ar(lesson.get("title",""))
+    title=lesson.get("title","")
     brand=ar(lesson.get("brand","برافو أكاديمي"))
-    ft=font_fit(d,title,"NotoKufiArabic.ttf",w-280,38,wght=900)
-    d.text((w//2,50),title,font=ft, fill=INK, anchor="mm")
+    ft=font_fit(d,title,"Cairo.ttf",w-280,42,wght=900)
+    draw_text(d, (w//2,50), title, font=ft, fill=INK, anchor="mm")
     d.rounded_rectangle((40,32,140,86),14,fill=BLUE, outline=INK, width=3)
     d.text((90,59), f"EP {lesson.get('episode','')}", font=vfont("Fredoka.ttf",22,800), fill=WHITE, anchor="mm")
     # layout with mascot gap: reserve bottom 140 and keep right gap for mascot
@@ -151,18 +156,18 @@ def draw_scene_partial(lesson, scene, visible, w, h):
     else:
         d.rounded_rectangle((px,py,px+pw,py+ph),24,fill=(220,230,250))
         # placeholder text
-        d.text((px+pw//2, py+ph//2), ar("صورة تعليمية"), font=vfont("NotoKufiArabic.ttf",28), fill=TEAL, anchor="mm")
+        draw_text(d, (px+pw//2, py+ph//2), "صورة تعليمية", font=vfont("NotoKufiArabic.ttf",28), fill=TEAL, anchor="mm")
     cap=scene.get("caption")
     if cap:
         d.rectangle((px, py+ph-70, px+pw, py+ph), fill=INK)
-        cf=font_fit(d, ar(cap), "NotoSansArabic.ttf", pw-24, 26)
-        d.text((px+pw//2, py+ph-35), ar(cap), font=cf, fill=WHITE, anchor="mm")
+        cf=font_fit(d, cap, "NotoSansArabic.ttf", pw-24, 26)
+        draw_text(d, (px+pw//2, py+ph-35), cap, font=cf, fill=WHITE, anchor="mm")
     # board
     d.rounded_rectangle((bx,by,bx+bw,by+bh),28,fill=WHITE, outline=INK, width=4)
     bt=scene.get("board_title","")
     if bt:
         d.rounded_rectangle((bx+24,by+20,bx+420,by+78),18,fill=TEAL, outline=INK, width=3)
-        d.text((bx+222,by+49),ar(bt),font=vfont("NotoKufiArabic.ttf",26,800),fill=WHITE,anchor="mm")
+        draw_text(d, (bx+222,by+49), bt, font=vfont("NotoKufiArabic.ttf",26,800), fill=WHITE, anchor="mm")
     # lines with reveal: show only first visible
     lines=scene.get("lines",[])
     # choose fonts per line; handle RTL align: centered
@@ -173,11 +178,14 @@ def draw_scene_partial(lesson, scene, visible, w, h):
         text=str(line.get("text",""))
         style=STYLES.get(line.get("style","small"), STYLES["small"])
         shown=ar(text) if any("\u0600" <= c <= "\u06FF" for c in text) else text
-        fname="Amiri-Bold.ttf" if line.get("style")=="eq" else "NotoSansArabic.ttf"
-        # fallback to appropriate font for French
-        if line.get("style")=="eq" and not any("\u0600" <= c <= "\u06FF" for c in text):
+        is_ar = any("\u0600" <= c <= "\u06FF" for c in text)
+        if is_ar:
+            fname="Cairo.ttf" if line.get("style")!="eq" else "Amiri-Bold.ttf"
+            wght=800 if line.get("style") in ("small","label") else 900
+        else:
             fname="Fredoka.ttf"
-        f=font_fit(d, shown, fname, bw-80, style["size"])
+            wght=800
+        f=font_fit(d, text, fname, bw-80, style["size"], wght=wght)
         # highlight animation for newly revealed line: light yellow bg for last revealed
         if idx==visible-1 and visible>0:
             # subtle highlight rectangle
@@ -186,7 +194,7 @@ def draw_scene_partial(lesson, scene, visible, w, h):
             x1=bx+bw//2 + tx_w//2 +12
             y0=y-34; y1=y+34
             d.rounded_rectangle((x0,y0,x1,y1),12,fill=(255,247,200), outline=None)
-        d.text((bx+bw//2, y), shown, font=f, fill=style["fill"], anchor="mm")
+        draw_text(d, (bx+bw//2, y), text, font=f, fill=style["fill"], anchor="mm")
         # if answer, ellipse highlight but only when revealed
         if line.get("style")=="answer":
             # don't draw until after pause: but we are revealing, so draw
@@ -196,7 +204,7 @@ def draw_scene_partial(lesson, scene, visible, w, h):
             draw_geometry(d, bx, y+50, bw, 120, line["shape"])
             y+=130
             continue
-        y+=78
+        y+=82
     # mascot safe zone visual hint: empty gap 130px at bottom-right
     # ensure no content overlaps: we already reserved bottom safe; draw mascot placeholder
     mx,my,mw,mh = w-150, h-150, 130,130
@@ -215,7 +223,7 @@ def draw_scene_partial(lesson, scene, visible, w, h):
         d.text((mx+mw//2, my+mh//2), "★", font=vfont("Fredoka.ttf",64,800), fill=INK, anchor="mm")
     # watermark gap: ensure no text overlaps mascot: already cleared
     # footer brand centered but offset to keep away from mascot
-    d.text((w//2, h-36), brand, font=vfont("NotoSansArabic.ttf",22,700), fill=BLUE, anchor="mm")
+    draw_text(d, (w//2, h-36), brand, font=vfont("Cairo.ttf",24,800), fill=BLUE, anchor="mm")
     # subtle page number
     d.text((bx+30, h-36), f"{visible}/{len(lines)}", font=vfont("Fredoka.ttf",18), fill=(120,120,120), anchor="lm")
     if scene.get("confetti"):
@@ -269,8 +277,8 @@ def render(lesson_path: Path, out_mp4: Path, intro=False):
             L=Image.open(logo).convert("RGB").resize((420,420), Image.LANCZOS)
             intro_img.paste(L,((w-420)//2,180))
         d=ImageDraw.Draw(intro_img)
-        d.text((w//2,680), ar(lesson.get("brand","برافو أكاديمي")), font=vfont("NotoKufiArabic.ttf",48,900), fill=BLUE, anchor="mm")
-        d.text((w//2,760), ar(lesson.get("title","")), font=vfont("NotoSansArabic.ttf",32,700), fill=INK, anchor="mm")
+        draw_text(d, (w//2,680), lesson.get("brand","برافو أكاديمي"), font=vfont("NotoKufiArabic.ttf",48,900), fill=BLUE, anchor="mm")
+        draw_text(d, (w//2,760), lesson.get("title",""), font=vfont("NotoSansArabic.ttf",32,700), fill=INK, anchor="mm")
         p=frames_dir/f"{n:05d}.png"; intro_img.save(p); n+=1
         sil=tmp/"sil.wav"
         subprocess.check_call([ffmpeg,"-y","-f","lavfi","-i","anullsrc=r=24000:cl=mono","-t","3.2",sil], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
