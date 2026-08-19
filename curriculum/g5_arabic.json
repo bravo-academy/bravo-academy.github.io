@@ -1,0 +1,28 @@
+{
+  "level": "g5",
+  "level_ar": "السنة الخامسة أساسي",
+  "subject": "arabic",
+  "subject_ar": "لغة عربية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "كان وأخواتها",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "إنّ وأخواتها",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "العدد والمعدود التمهيدي",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "الإنتاج الكتابي: السرد",
+      "status": "planned"
+    }
+  ]
+}

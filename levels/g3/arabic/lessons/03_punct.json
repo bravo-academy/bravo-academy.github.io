@@ -1,0 +1,20 @@
+{
+  "title": "علامات الترقيم والإنتاج الكتابي",
+  "episode": "3",
+  "brand": "السنة الثالثة أساسي · لغة عربية",
+  "level": "g3",
+  "subject": "arabic",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "علامات الترقيم | عربية الثالثة", "tags": "ترقيم, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/03_s1.mp3", "image": "../img/01_s2.jpg", "caption": "النقطة والفاصلة", "board_title": "علامات",
+     "lines": [{"text": ".  ،  ؟  !", "style": "eq"}],
+     "narration": "النقطة توقف الجملة. الفاصلة استراحة قصيرة. علامة الاستفهام للسؤال، والتعجب للدهشة."},
+    {"audio": "../audio/03_s2.mp3", "image": "../img/01_s3.jpg", "caption": "نكتب فقرة", "board_title": "إنتاج",
+     "lines": [{"text": "فكرة + مثال + خاتمة", "style": "label"}],
+     "narration": "نكتب فقرة قصيرة: فكرة، مثال من حياتنا، ثم جملة ختام."},
+    {"audio": "../audio/03_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "تمرين",
+     "lines": [{"text": "اكتب 3 جمل بعلامات صحيحة", "style": "ask"}],
+     "narration": "اكتبوا ثلاث جمل عن مدرستكم بعلامات ترقيم صحيحة. برافو!", "confetti": true}
+  ]
+}

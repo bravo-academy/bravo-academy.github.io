@@ -1,0 +1,28 @@
+{
+  "level": "g4",
+  "level_ar": "السنة الرابعة أساسي",
+  "subject": "islamic",
+  "subject_ar": "تربية إسلامية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الصوم",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "سورة الناس والفلق",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "قصة إبراهيم",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "حقوق الجار",
+      "status": "planned"
+    }
+  ]
+}

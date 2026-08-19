@@ -1,0 +1,22 @@
+{
+  "title": "التوازي والتعامد ومحيط المستطيل",
+  "episode": "3",
+  "brand": "السنة الثالثة أساسي · هندسة",
+  "level": "g3",
+  "subject": "math",
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "yt": {"title": "التوازي والتعامد ومحيط المستطيل | هندسة الثالثة أساسي", "tags": "هندسة, توازي, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/03_s1.mp3", "image": "../img/03_s1.jpg", "caption": "سكة القطار", "board_title": "توازي",
+     "lines": [{"text": "مستقيمان لا يلتقيان", "style": "eq"}, {"text": "نرمز: //", "style": "label"}],
+     "narration": "سكة القطار مستقيمان متوازيان: لا يلتقيان أبدا. هذا هو التوازي."},
+    {"audio": "../audio/03_s2.mp3", "image": "../img/01_s3.jpg", "caption": "الزاوية القائمة", "board_title": "تعامد",
+     "lines": [{"text": "نرسم بالكوس", "style": "eq"}, {"text": "نرمز: ⊥", "style": "label"}],
+     "narration": "التعامد يصنع زاوية قائمة. نتحقق بالكوس مثل شباك سيدي بوسعيد."},
+    {"audio": "../audio/03_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "المحيط",
+     "lines": [{"text": "P = 2 × (L + l)", "style": "eq"}, {"text": "12 و 8 → 40", "style": "answer"}, {"text": "تمرين: 15 و 10", "style": "ask"}],
+     "narration": "محيط المستطيل اثنان في مجموع الطول والعرض. جنان طوله اثنا عشر وعرضه ثمانية محيطه أربعون. احسبوا خمسة عشر وعشرة. برافو!", "confetti": true}
+  ]
+}

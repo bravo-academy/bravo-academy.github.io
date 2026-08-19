@@ -1,0 +1,28 @@
+{
+  "level": "g1",
+  "level_ar": "السنة الأولى أساسي",
+  "subject": "arabic",
+  "subject_ar": "لغة عربية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الحروف والحركات",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "المقطع والقراءة الأولى",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "الكلمة والجملة القصيرة",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "الاستماع والتعبير الشفوي",
+      "status": "planned"
+    }
+  ]
+}

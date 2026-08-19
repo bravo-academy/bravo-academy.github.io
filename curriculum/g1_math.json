@@ -1,0 +1,48 @@
+{
+  "level": "g1",
+  "level_ar": "السنة الأولى أساسي",
+  "subject": "math",
+  "subject_ar": "رياضيات",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "العدّ من 1 إلى 20",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "قراءة وكتابة الأعداد حتى 20",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "المقارنة: أكبر / أصغر",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "الجمع البسيط حتى 10",
+      "status": "planned"
+    },
+    {
+      "id": "05",
+      "title": "الطرح البسيط حتى 10",
+      "status": "planned"
+    },
+    {
+      "id": "06",
+      "title": "الأشكال: مربع دائرة مثلث",
+      "status": "planned"
+    },
+    {
+      "id": "07",
+      "title": "التصنيف والترتيب",
+      "status": "planned"
+    },
+    {
+      "id": "08",
+      "title": "القياس: أطول / أقصر",
+      "status": "planned"
+    }
+  ]
+}

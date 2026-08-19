@@ -1,0 +1,23 @@
+{
+  "level": "g5",
+  "level_ar": "السنة الخامسة أساسي",
+  "subject": "civic",
+  "subject_ar": "تربية مدنية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الدستور مبسّط",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "الانتخابات معناها",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "التسامح",
+      "status": "planned"
+    }
+  ]
+}

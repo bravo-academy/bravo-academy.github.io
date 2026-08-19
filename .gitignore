@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+out/**/*.mp4
+levels/**/out/**/*.mp4
+*.mp4
+.DS_Store

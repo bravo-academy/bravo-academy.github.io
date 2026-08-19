@@ -1,0 +1,20 @@
+{
+  "title": "حالات المادة وتحولاتها",
+  "episode": "3",
+  "brand": "السنة الثالثة أساسي · إيقاظ علمي",
+  "level": "g3",
+  "subject": "science",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "حالات المادة وتحولاتها | إيقاظ علمي الثالثة", "tags": "مادة, ماء, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/03_s1.mp3", "image": "../img/03_s1.jpg", "caption": "ثلاث حالات", "board_title": "المادة",
+     "lines": [{"text": "صلب · سائل · غاز", "style": "eq"}],
+     "narration": "الماء نفسه ثلاث حالات: جليد صلب، ماء سائل، وبخار غازي."},
+    {"audio": "../audio/03_s2.mp3", "image": "../img/03_s1.jpg", "caption": "درجات الحرارة", "board_title": "تحولات",
+     "lines": [{"text": "انصهار عند 0", "style": "label"}, {"text": "غليان عند 100", "style": "op"}],
+     "narration": "الجليد ينصهر عند الصفر. الماء يغلي عند مئة. التجمد عكس الانصهار، والتكاثف عكس التبخر."},
+    {"audio": "../audio/03_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "كويز",
+     "lines": [{"text": "وين نشوفو التكاثف؟", "style": "ask"}],
+     "narration": "وين تشوفوا التكاثف في الدار؟ تلميح: المرآة بعد الدوش. برافو!", "confetti": true}
+  ]
+}

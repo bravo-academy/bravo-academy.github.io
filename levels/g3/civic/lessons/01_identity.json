@@ -1,0 +1,20 @@
+{
+  "title": "الهوية التونسية",
+  "episode": "1",
+  "brand": "السنة الثالثة أساسي · تربية مدنية",
+  "level": "g3",
+  "subject": "civic",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "الهوية التونسية | تربية مدنية الثالثة أساسي 🇹🇳", "tags": "تربية مدنية, تونس, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/01_s1.mp3", "image": "../img/01_s1.jpg", "caption": "علمي", "board_title": "الرموز",
+     "lines": [{"text": "علم أحمر وهلال ونجمة", "style": "eq"}, {"text": "النشيد الوطني", "style": "small"}],
+     "narration": "نحن تونسيون. علمنا أحمر وفي وسطه هلال ونجمة بيضاء. نقف احتراماً للنشيد الوطني."},
+    {"audio": "../audio/01_s2.mp3", "image": "../img/01_s2.jpg", "caption": "نحترم بعضنا", "board_title": "العيش معاً",
+     "lines": [{"text": "احترام · تعاون · نظام", "style": "eq"}],
+     "narration": "الهوية ليست العلم فقط. هي أن نحترم بعضنا ونتعاون في القسم والحي."},
+    {"audio": "../audio/01_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "تمرين",
+     "lines": [{"text": "ارسم العلم التونسي", "style": "ask"}],
+     "narration": "تمرين الدار: ارسموا العلم التونسي وسمّوا لونيه. برافو!", "confetti": true}
+  ]
+}

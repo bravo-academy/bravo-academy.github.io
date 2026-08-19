@@ -1,0 +1,28 @@
+{
+  "level": "g6",
+  "level_ar": "السنة السادسة أساسي",
+  "subject": "french",
+  "subject_ar": "لغة فرنسية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "Le futur proche",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "Les prépositions",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "Écrire un petit texte",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "Comprendre un dialogue",
+      "status": "planned"
+    }
+  ]
+}

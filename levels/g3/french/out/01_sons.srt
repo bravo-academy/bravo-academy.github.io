@@ -1,0 +1,11 @@
+1
+00:00:03,200 --> 00:00:07,200
+Bonjour ! Aujourd'hui, les sons et les lettres. A comme avion, B comme ballon, C comme cadeau.
+
+2
+00:00:07,200 --> 00:00:11,200
+Ma première phrase : Lina mange une pomme. Sujet, verbe, complément.
+
+3
+00:00:11,200 --> 00:00:15,200
+Petit quiz : B comme… ? Trouvez trois mots qui commencent par A. Bravo !

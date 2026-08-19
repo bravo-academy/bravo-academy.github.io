@@ -1,0 +1,28 @@
+{
+  "level": "g2",
+  "level_ar": "السنة الثانية أساسي",
+  "subject": "islamic",
+  "subject_ar": "تربية إسلامية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "أركان الإيمان",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "الوضوء",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "سورة الإخلاص",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "برّ الوالدين",
+      "status": "planned"
+    }
+  ]
+}

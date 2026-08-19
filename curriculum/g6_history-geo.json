@@ -1,0 +1,28 @@
+{
+  "level": "g6",
+  "level_ar": "السنة السادسة أساسي",
+  "subject": "history-geo",
+  "subject_ar": "تاريخ وجغرافيا",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "العالم من حولي",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "الاستقلال مبسّط",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "الاقتصاد التونسي للأطفال",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "التراث والمعالم",
+      "status": "planned"
+    }
+  ]
+}

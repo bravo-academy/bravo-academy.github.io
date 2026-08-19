@@ -1,0 +1,28 @@
+{
+  "level": "g6",
+  "level_ar": "السنة السادسة أساسي",
+  "subject": "islamic",
+  "subject_ar": "تربية إسلامية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الحجّ تعريفه",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "السيرة: فتح مكة مبسّط",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "حقوق المسلم",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "الإحسان للحيوان",
+      "status": "planned"
+    }
+  ]
+}

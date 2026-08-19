@@ -1,0 +1,19 @@
+{
+  "title": "قصص الأنبياء: نوح",
+  "episode": "3",
+  "brand": "السنة الثالثة أساسي · تربية إسلامية",
+  "level": "g3", "subject": "islamic",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "قصة نوح عليه السلام | إسلامية الثالثة", "tags": "أنبياء, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/03_s1.mp3", "image": "../img/01_s1.jpg", "caption": "دعوة طويلة", "board_title": "نوح",
+     "lines": [{"text": "صبر ودعوة", "style": "eq"}],
+     "narration": "نوح عليه السلام دعا قومه بصبر طويل إلى عبادة الله."},
+    {"audio": "../audio/03_s2.mp3", "image": "../img/01_s2.jpg", "caption": "السفينة", "board_title": "نجاة",
+     "lines": [{"text": "من آمن نجا", "style": "small"}],
+     "narration": "صنع السفينة، ونجا من آمن معه. العبرة: الطاعة تنجي."},
+    {"audio": "../audio/03_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "عبرة",
+     "lines": [{"text": "ماذا نتعلم من صبر نوح؟", "style": "ask"}],
+     "narration": "ماذا نتعلم من صبر نوح؟ اكتبوا جملة. برافو!", "confetti": true}
+  ]
+}

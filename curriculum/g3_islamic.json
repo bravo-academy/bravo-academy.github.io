@@ -1,0 +1,32 @@
+{
+  "level": "g3",
+  "level_ar": "السنة الثالثة أساسي",
+  "subject": "islamic",
+  "subject_ar": "تربية إسلامية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الصلاة وأوقاتها",
+      "status": "ready",
+      "file": "levels/g3/islamic/lessons/01_salat.json"
+    },
+    {
+      "id": "02",
+      "title": "الصدق والأمانة",
+      "status": "ready",
+      "file": "levels/g3/islamic/lessons/02_sidq.json"
+    },
+    {
+      "id": "03",
+      "title": "قصص الأنبياء: نوح",
+      "status": "ready",
+      "file": "levels/g3/islamic/lessons/03_nuh.json"
+    },
+    {
+      "id": "04",
+      "title": "آداب المسجد",
+      "status": "ready",
+      "file": "levels/g3/islamic/lessons/04_masjid.json"
+    }
+  ]
+}

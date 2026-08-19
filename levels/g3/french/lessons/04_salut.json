@@ -1,0 +1,19 @@
+{
+  "title": "Les salutations",
+  "episode": "4",
+  "brand": "3e année · Français",
+  "level": "g3", "subject": "french",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "Les salutations | Français 3e", "tags": "bonjour, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/04_s1.mp3", "image": "../img/01_s1.jpg", "caption": "Bonjour !", "board_title": "Dire hello",
+     "lines": [{"text": "Bonjour · Bonsoir · Salut", "style": "eq"}],
+     "narration": "On dit bonjour le matin, bonsoir le soir, et salut à un ami."},
+    {"audio": "../audio/04_s2.mp3", "image": "../img/01_s2.jpg", "caption": "Politesse", "board_title": "Merci",
+     "lines": [{"text": "s'il te plaît · merci · au revoir", "style": "small"}],
+     "narration": "S'il te plaît, merci, au revoir. La politesse, c'est important."},
+    {"audio": "../audio/04_s3.mp3", "image": "../img/01_s3.jpg", "caption": "Bravo !", "board_title": "Défi",
+     "lines": [{"text": "Saluez un ami en français", "style": "ask"}],
+     "narration": "Saluez un ami en français dans les commentaires. Bravo !", "confetti": true}
+  ]
+}

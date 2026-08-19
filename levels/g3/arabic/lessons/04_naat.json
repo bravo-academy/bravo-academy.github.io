@@ -1,0 +1,19 @@
+{
+  "title": "النعت والإضافة التمهيدية",
+  "episode": "4",
+  "brand": "السنة الثالثة أساسي · لغة عربية",
+  "level": "g3", "subject": "arabic",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "النعت والإضافة | عربية الثالثة", "tags": "نعت, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/04_s1.mp3", "image": "../img/01_s2.jpg", "caption": "نصف الاسم", "board_title": "نعت",
+     "lines": [{"text": "الكتابُ المفيدُ", "style": "eq"}],
+     "narration": "النعت يصف الاسم. الكتاب المفيد: المفيد نعت للكتاب."},
+    {"audio": "../audio/04_s2.mp3", "image": "../img/01_s3.jpg", "caption": "إضافة", "board_title": "إضافة",
+     "lines": [{"text": "حقيبةُ التلميذِ", "style": "eq"}],
+     "narration": "الإضافة تربط اسمين: حقيبة التلميذ."},
+    {"audio": "../audio/04_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "تمرين",
+     "lines": [{"text": "هات نعتا لجملة: القمر ...", "style": "ask"}],
+     "narration": "أكملوا: القمرُ ... بنعت مناسب. برافو!", "confetti": true}
+  ]
+}

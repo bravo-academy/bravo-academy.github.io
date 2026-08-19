@@ -1,0 +1,19 @@
+{
+  "title": "التعاون والعمل الجماعي",
+  "episode": "3",
+  "brand": "السنة الثالثة أساسي · تربية مدنية",
+  "level": "g3", "subject": "civic",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "التعاون والعمل الجماعي | مدنية الثالثة", "tags": "تعاون, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/03_s1.mp3", "image": "../img/01_s2.jpg", "caption": "معا أقوى", "board_title": "تعاون",
+     "lines": [{"text": "نساعد · نشارك · نستمع", "style": "eq"}],
+     "narration": "العمل الجماعي: نساعد ونشارك ونستمع لرأي الآخر."},
+    {"audio": "../audio/03_s2.mp3", "image": "../img/01_s1.jpg", "caption": "في المشروع", "board_title": "أدوار",
+     "lines": [{"text": "كل واحد له دور", "style": "label"}],
+     "narration": "في مشروع القسم لكل واحد دور. النجاح للجميع."},
+    {"audio": "../audio/03_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "تمرين",
+     "lines": [{"text": "متى تعاونت هذا الأسبوع؟", "style": "ask"}],
+     "narration": "متى تعاونتم هذا الأسبوع؟ اكتبوا جملة. برافو!", "confetti": true}
+  ]
+}

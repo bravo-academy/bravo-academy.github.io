@@ -1,0 +1,38 @@
+{
+  "level": "g5",
+  "level_ar": "السنة الخامسة أساسي",
+  "subject": "math",
+  "subject_ar": "رياضيات",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الأعداد الكبيرة والعمليات الأربع",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "الكسور والأعداد العشرية",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "النسبة المئوية التمهيدية",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "المحيط والمساحة",
+      "status": "planned"
+    },
+    {
+      "id": "05",
+      "title": "الزوايا والمثلثات",
+      "status": "planned"
+    },
+    {
+      "id": "06",
+      "title": "الحجوم البسيطة",
+      "status": "planned"
+    }
+  ]
+}

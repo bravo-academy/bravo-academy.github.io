@@ -1,0 +1,22 @@
+{
+  "title": "جدول الضرب والتمهيد للقسمة",
+  "episode": "4",
+  "brand": "السنة الثالثة أساسي · رياضيات",
+  "level": "g3",
+  "subject": "math",
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "yt": {"title": "جدول الضرب والتمهيد للقسمة | رياضيات الثالثة أساسي", "tags": "ضرب, قسمة, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/04_s1.mp3", "image": "../img/04_s1.jpg", "caption": "كرتونة البيض", "board_title": "ضرب",
+     "lines": [{"text": "2 × 6 = 12", "style": "eq"}, {"text": "الضرب جمع متكرر", "style": "label"}],
+     "narration": "الضرب جمع متكرر. صفين في ستة بيضات يساوي اثني عشر."},
+    {"audio": "../audio/04_s2.mp3", "image": "../img/01_s3.jpg", "caption": "وقّف وجاوب", "board_title": "كويز",
+     "lines": [{"text": "3 × 4 = ؟", "style": "ask"}, {"text": "3 × 4 = 4 × 3", "style": "small"}],
+     "narration": "كويز الفرّان: ثلاثة في أربعة كم؟ خاصية التبديل: ثلاثة في أربعة تساوي أربعة في ثلاثة."},
+    {"audio": "../audio/04_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "قسمة",
+     "lines": [{"text": "12 : 4 = 3", "style": "answer"}, {"text": "5 × 6 و 15 : 3", "style": "ask"}],
+     "narration": "القسمة عكس الضرب. اثنا عشر تقسيم أربعة يساوي ثلاثة. تمرين: خمسة في ستة، وخمسة عشر تقسيم ثلاثة. برافو!", "confetti": true}
+  ]
+}

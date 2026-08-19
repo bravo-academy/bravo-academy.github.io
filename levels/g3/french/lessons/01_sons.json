@@ -1,0 +1,20 @@
+{
+  "title": "Les sons et les lettres",
+  "episode": "1",
+  "brand": "3e année · Français",
+  "level": "g3",
+  "subject": "french",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "Les sons et les lettres | Français 3e année 🇫🇷", "tags": "français, alphabet, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/01_s1.mp3", "image": "../img/01_s1.jpg", "caption": "A comme Avion", "board_title": "Alphabet",
+     "lines": [{"text": "A · B · C", "style": "eq"}, {"text": "Avion · Ballon · Cadeau", "style": "small"}],
+     "narration": "Bonjour ! Aujourd'hui, les sons et les lettres. A comme avion, B comme ballon, C comme cadeau."},
+    {"audio": "../audio/01_s2.mp3", "image": "../img/01_s2.jpg", "caption": "Ma première phrase", "board_title": "S + V + C",
+     "lines": [{"text": "Lina mange une pomme", "style": "eq"}, {"text": "Sujet + Verbe + Complément", "style": "label"}],
+     "narration": "Ma première phrase : Lina mange une pomme. Sujet, verbe, complément."},
+    {"audio": "../audio/01_s3.mp3", "image": "../img/01_s3.jpg", "caption": "Bravo !", "board_title": "Quiz",
+     "lines": [{"text": "B comme… ?", "style": "ask"}, {"text": "3 mots avec A", "style": "small"}],
+     "narration": "Petit quiz : B comme… ? Trouvez trois mots qui commencent par A. Bravo !", "confetti": true}
+  ]
+}

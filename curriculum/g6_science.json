@@ -1,0 +1,28 @@
+{
+  "level": "g6",
+  "level_ar": "السنة السادسة أساسي",
+  "subject": "science",
+  "subject_ar": "إيقاظ علمي / تربية علمية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الجهاز العصبي التمهيدي",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "الكواكب والنظام الشمسي",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "القوى والحركة",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "الماء في الطبيعة",
+      "status": "planned"
+    }
+  ]
+}

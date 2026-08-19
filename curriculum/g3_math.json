@@ -1,0 +1,42 @@
+{
+  "level": "g3",
+  "level_ar": "السنة الثالثة أساسي",
+  "subject": "math",
+  "subject_ar": "رياضيات",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الأعداد ذات 4 و5 أرقام حتى 99 999",
+      "status": "ready",
+      "file": "levels/g3/math/lessons/01_numbers.json"
+    },
+    {
+      "id": "02",
+      "title": "الجمع بالاحتفاظ والطرح بالاستعارة",
+      "status": "ready",
+      "file": "levels/g3/math/lessons/02_ops.json"
+    },
+    {
+      "id": "03",
+      "title": "التوازي والتعامد ومحيط المستطيل",
+      "status": "ready",
+      "file": "levels/g3/math/lessons/03_geo.json"
+    },
+    {
+      "id": "04",
+      "title": "جدول الضرب والتمهيد للقسمة",
+      "status": "ready",
+      "file": "levels/g3/math/lessons/04_mult.json"
+    },
+    {
+      "id": "05",
+      "title": "الكسور البسيطة",
+      "status": "planned"
+    },
+    {
+      "id": "06",
+      "title": "قياس الأطوال والكتل",
+      "status": "planned"
+    }
+  ]
+}

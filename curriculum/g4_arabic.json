@@ -1,0 +1,28 @@
+{
+  "level": "g4",
+  "level_ar": "السنة الرابعة أساسي",
+  "subject": "arabic",
+  "subject_ar": "لغة عربية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "أنواع الخبر",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "الفاعل والمفعول به",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "الهمزة المتوسطة",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "الإنتاج الكتابي: الوصف",
+      "status": "planned"
+    }
+  ]
+}

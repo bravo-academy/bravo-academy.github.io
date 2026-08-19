@@ -1,0 +1,28 @@
+{
+  "level": "g2",
+  "level_ar": "السنة الثانية أساسي",
+  "subject": "science",
+  "subject_ar": "إيقاظ علمي / تربية علمية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "أجزاء النبات",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "تغذية الحيوان",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "حالات الطقس",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "المواد من حولي",
+      "status": "planned"
+    }
+  ]
+}

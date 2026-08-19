@@ -1,0 +1,23 @@
+{
+  "level": "g6",
+  "level_ar": "السنة السادسة أساسي",
+  "subject": "civic",
+  "subject_ar": "تربية مدنية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الجمهورية التونسية",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "الحريات والمسؤوليات",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "البيئة مواطنة",
+      "status": "planned"
+    }
+  ]
+}

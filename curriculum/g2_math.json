@@ -1,0 +1,48 @@
+{
+  "level": "g2",
+  "level_ar": "السنة الثانية أساسي",
+  "subject": "math",
+  "subject_ar": "رياضيات",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الأعداد حتى 100",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "الجمع دون احتفاظ",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "الطرح دون استعارة",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "الوحدات والعشرات",
+      "status": "planned"
+    },
+    {
+      "id": "05",
+      "title": "الجمع بالاحتفاظ التمهيدي",
+      "status": "planned"
+    },
+    {
+      "id": "06",
+      "title": "الأشكال والمجسمات",
+      "status": "planned"
+    },
+    {
+      "id": "07",
+      "title": "النقود التونسية",
+      "status": "planned"
+    },
+    {
+      "id": "08",
+      "title": "قراءة الساعة كاملة",
+      "status": "planned"
+    }
+  ]
+}

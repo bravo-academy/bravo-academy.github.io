@@ -1,0 +1,38 @@
+{
+  "level": "g6",
+  "level_ar": "السنة السادسة أساسي",
+  "subject": "math",
+  "subject_ar": "رياضيات",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الأعداد النسبية التمهيدية",
+      "status": "planned"
+    },
+    {
+      "id": "02",
+      "title": "النسبة والتناسب",
+      "status": "planned"
+    },
+    {
+      "id": "03",
+      "title": "المئوية",
+      "status": "planned"
+    },
+    {
+      "id": "04",
+      "title": "الهندسة: التماثل والتناظر",
+      "status": "planned"
+    },
+    {
+      "id": "05",
+      "title": "المساحة والحجم",
+      "status": "planned"
+    },
+    {
+      "id": "06",
+      "title": "تنظيم المعطيات والرسوم البيانية",
+      "status": "planned"
+    }
+  ]
+}

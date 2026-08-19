@@ -1,0 +1,32 @@
+{
+  "level": "g3",
+  "level_ar": "السنة الثالثة أساسي",
+  "subject": "french",
+  "subject_ar": "لغة فرنسية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "Les sons et les lettres",
+      "status": "ready",
+      "file": "levels/g3/french/lessons/01_sons.json"
+    },
+    {
+      "id": "02",
+      "title": "Le vocabulaire de la vie quotidienne",
+      "status": "ready",
+      "file": "levels/g3/french/lessons/02_vocab.json"
+    },
+    {
+      "id": "03",
+      "title": "Sujet + verbe + complément",
+      "status": "ready",
+      "file": "levels/g3/french/lessons/03_svc.json"
+    },
+    {
+      "id": "04",
+      "title": "Les salutations",
+      "status": "ready",
+      "file": "levels/g3/french/lessons/04_salut.json"
+    }
+  ]
+}

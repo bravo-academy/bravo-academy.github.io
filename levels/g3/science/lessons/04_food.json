@@ -1,0 +1,19 @@
+{
+  "title": "التغذية والصحة",
+  "episode": "4",
+  "brand": "السنة الثالثة أساسي · إيقاظ علمي",
+  "level": "g3", "subject": "science",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "التغذية والصحة | إيقاظ علمي الثالثة", "tags": "تغذية, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/04_s1.mp3", "image": "../img/03_s1.jpg", "caption": "طبق متوازن", "board_title": "غذاء",
+     "lines": [{"text": "خضر · غلال · حبوب · ماء", "style": "eq"}],
+     "narration": "الجسم يحتاج خضرا وغلابا وحبوبا وماء كل يوم."},
+    {"audio": "../audio/04_s2.mp3", "image": "../img/02_s1.jpg", "caption": "أقل سكر", "board_title": "صحة",
+     "lines": [{"text": "اغسل يديك قبل الأكل", "style": "label"}],
+     "narration": "نغسل اليدين قبل الأكل ونقلل السكريات لحماية الأسنان."},
+    {"audio": "../audio/04_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "تمرين",
+     "lines": [{"text": "ارسم طبق فطور صحي", "style": "ask"}],
+     "narration": "ارسموا طبق فطور صحي. برافو!", "confetti": true}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "آداب المسجد",
+  "episode": "4",
+  "brand": "السنة الثالثة أساسي · تربية إسلامية",
+  "level": "g3", "subject": "islamic",
+  "width": 1920, "height": 1080, "fps": 24,
+  "yt": {"title": "آداب المسجد | إسلامية الثالثة", "tags": "مسجد, Bravo Academy"},
+  "scenes": [
+    {"audio": "../audio/04_s1.mp3", "image": "../img/01_s1.jpg", "caption": "بيت الله", "board_title": "أدب",
+     "lines": [{"text": "هدوء · طهارة · احترام", "style": "eq"}],
+     "narration": "المسجد بيت الله: ندخل بهدوء وطهارة واحترام."},
+    {"audio": "../audio/04_s2.mp3", "image": "../img/01_s2.jpg", "caption": "لا نؤذي", "board_title": "لا",
+     "lines": [{"text": "لا نركض · لا نرفع الصوت", "style": "op"}],
+     "narration": "لا نركض ولا نرفع أصواتنا حتى لا نزعج المصلين."},
+    {"audio": "../audio/04_s3.mp3", "image": "../img/01_s3.jpg", "caption": "برافو!", "board_title": "تمرين",
+     "lines": [{"text": "اذكر أدبين من آداب المسجد", "style": "ask"}],
+     "narration": "اذكروا أدبين من آداب المسجد. برافو!", "confetti": true}
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "level": "g3",
+  "level_ar": "السنة الثالثة أساسي",
+  "subject": "arabic",
+  "subject_ar": "لغة عربية",
+  "lessons": [
+    {
+      "id": "01",
+      "title": "الجملة الفعلية والجملة الاسمية",
+      "status": "ready",
+      "file": "levels/g3/arabic/lessons/01_jumla.json"
+    },
+    {
+      "id": "02",
+      "title": "تصريف الأفعال في الماضي والحاضر",
+      "status": "ready",
+      "file": "levels/g3/arabic/lessons/02_sarf.json"
+    },
+    {
+      "id": "03",
+      "title": "علامات الترقيم والإنتاج الكتابي",
+      "status": "ready",
+      "file": "levels/g3/arabic/lessons/03_punct.json"
+    },
+    {
+      "id": "04",
+      "title": "النعت والإضافة التمهيدية",
+      "status": "ready",
+      "file": "levels/g3/arabic/lessons/04_naat.json"
+    }
+  ]
+}
