@@ -1,0 +1,11 @@
+1
+00:00:00,000 --> 00:00:04,000
+La phrase simple : sujet, verbe, complément.
+
+2
+00:00:04,000 --> 00:00:08,000
+Adam lit un livre. Adam est le sujet, lit le verbe, un livre le complément.
+
+3
+00:00:08,000 --> 00:00:12,000
+Inventez une phrase avec sujet, verbe et complément. Bravo !
