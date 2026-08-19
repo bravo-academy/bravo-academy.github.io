@@ -4,17 +4,108 @@
   "brand": "3e année · Français",
   "level": "g3",
   "subject": "french",
-  "width": 1920, "height": 1080, "fps": 24,
-  "yt": {"title": "Vocabulaire du quotidien | Français 3e", "tags": "français, vocabulaire, Bravo Academy"},
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "yt": {
+    "title": "Vocabulaire du quotidien | Français 3e"
+  },
   "scenes": [
-    {"audio": "../audio/02_s1.mp3", "image": "../img/01_s2.jpg", "caption": "À la maison", "board_title": "Mots",
-     "lines": [{"text": "table · chaise · porte", "style": "eq"}],
-     "narration": "Aujourd'hui le vocabulaire de la maison : une table, une chaise, une porte."},
-    {"audio": "../audio/02_s2.mp3", "image": "../img/01_s1.jpg", "caption": "Je dis", "board_title": "Phrases",
-     "lines": [{"text": "J'ouvre la porte.", "style": "small"}, {"text": "Je m'assieds.", "style": "small"}],
-     "narration": "Je construis une phrase : J'ouvre la porte. Je m'assieds sur la chaise."},
-    {"audio": "../audio/02_s3.mp3", "image": "../img/01_s3.jpg", "caption": "Bravo !", "board_title": "Défi",
-     "lines": [{"text": "3 objets de ta chambre", "style": "ask"}],
-     "narration": "Trouvez trois objets de votre chambre en français. Bravo !", "confetti": true}
+    {
+      "audio": "../audio/02_s1.mp3",
+      "image": "../img/01_s2.jpg",
+      "caption": "Chez moi à Tunis",
+      "board_title": "Maison",
+      "lines": [
+        {
+          "text": "table · chaise · porte · fenêtre",
+          "style": "eq"
+        }
+      ],
+      "narration": "Aujourd'hui, le vocabulaire de la maison à Tunis. Une table, une chaise, une porte, une fenêtre. Touchez chaque objet en le nommant. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/02_s2.mp3",
+      "image": "../img/01_s1.jpg",
+      "caption": "Dans ma chambre",
+      "board_title": "Chambre",
+      "lines": [
+        {
+          "text": "lit · livre · cartable",
+          "style": "eq"
+        },
+        {
+          "text": "mon lit est doux",
+          "style": "small"
+        }
+      ],
+      "narration": "Dans ma chambre : un lit doux, un livre passionnant, un cartable bleu pour l'école. Mon cartable contient mes livres. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/02_s3.mp3",
+      "image": "../img/01_s2.jpg",
+      "caption": "Je fais une phrase",
+      "board_title": "Phrase",
+      "lines": [
+        {
+          "text": "J'ouvre la porte.",
+          "style": "eq"
+        },
+        {
+          "text": "Je lis un livre.",
+          "style": "small"
+        }
+      ],
+      "narration": "Je fais une petite phrase : J'ouvre la porte. Je lis un livre sur mon lit. Sujet, verbe, complément, vous voyez ?. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/02_s4.mp3",
+      "image": "../img/01_s1.jpg",
+      "caption": "Au marché",
+      "board_title": "Marché",
+      "lines": [
+        {
+          "text": "pain · lait · dattes",
+          "style": "eq"
+        }
+      ],
+      "narration": "Au marché de Nabeul : du pain, du lait, des dattes. J'achète trois dattes sucrées. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/02_s5.mp3",
+      "image": "../img/01_s3.jpg",
+      "caption": "Quiz",
+      "board_title": "Quiz",
+      "lines": [
+        {
+          "text": "Comment dit-on كرّاس en français ?",
+          "style": "ask"
+        },
+        {
+          "text": "... réfléchis ...",
+          "style": "label"
+        },
+        {
+          "text": "un cahier",
+          "style": "answer"
+        }
+      ],
+      "narration": "Quiz : comment dit-on كراس en français ? Réfléchissez trois secondes... On dit un cahier ! Et قلم c'est un stylo. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin.",
+      "pause_after": 2
+    },
+    {
+      "audio": "../audio/02_s6.mp3",
+      "image": "../img/01_s3.jpg",
+      "caption": "Bravo !",
+      "board_title": "Défi",
+      "lines": [
+        {
+          "text": "Nommez 4 objets de ta chambre",
+          "style": "ask"
+        }
+      ],
+      "narration": "Défi maison : nommez quatre objets de votre chambre en français et écrivez-les. Je lis tous vos commentaires. Bravo. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin.",
+      "confetti": true
+    }
   ]
 }

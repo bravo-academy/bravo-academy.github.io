@@ -2,18 +2,118 @@
   "title": "Les salutations",
   "episode": "4",
   "brand": "3e année · Français",
-  "level": "g3", "subject": "french",
-  "width": 1920, "height": 1080, "fps": 24,
-  "yt": {"title": "Les salutations | Français 3e", "tags": "bonjour, Bravo Academy"},
+  "level": "g3",
+  "subject": "french",
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "yt": {
+    "title": "Les salutations | Français 3e"
+  },
   "scenes": [
-    {"audio": "../audio/04_s1.mp3", "image": "../img/01_s1.jpg", "caption": "Bonjour !", "board_title": "Dire hello",
-     "lines": [{"text": "Bonjour · Bonsoir · Salut", "style": "eq"}],
-     "narration": "On dit bonjour le matin, bonsoir le soir, et salut à un ami."},
-    {"audio": "../audio/04_s2.mp3", "image": "../img/01_s2.jpg", "caption": "Politesse", "board_title": "Merci",
-     "lines": [{"text": "s'il te plaît · merci · au revoir", "style": "small"}],
-     "narration": "S'il te plaît, merci, au revoir. La politesse, c'est important."},
-    {"audio": "../audio/04_s3.mp3", "image": "../img/01_s3.jpg", "caption": "Bravo !", "board_title": "Défi",
-     "lines": [{"text": "Saluez un ami en français", "style": "ask"}],
-     "narration": "Saluez un ami en français dans les commentaires. Bravo !", "confetti": true}
+    {
+      "audio": "../audio/04_s1.mp3",
+      "image": "../img/01_s1.jpg",
+      "caption": "Bonjour !",
+      "board_title": "Bonjour",
+      "lines": [
+        {
+          "text": "Bonjour le matin",
+          "style": "eq"
+        },
+        {
+          "text": "Bonsoir le soir · Salut = ami",
+          "style": "small"
+        }
+      ],
+      "narration": "Bonjour les amis ! Le matin on dit bonjour à la maîtresse, le soir on dit bonsoir à ses parents, et à un copain on dit salut ! Trois mots magiques. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/04_s2.mp3",
+      "image": "../img/01_s2.jpg",
+      "caption": "Politesse",
+      "board_title": "Merci",
+      "lines": [
+        {
+          "text": "s'il te plaît · merci",
+          "style": "eq"
+        },
+        {
+          "text": "pardon · au revoir",
+          "style": "small"
+        }
+      ],
+      "narration": "La politesse ouvre les portes : s'il te plaît pour demander, merci pour remercier, pardon pour s'excuser, au revoir pour partir. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/04_s3.mp3",
+      "image": "../img/01_s1.jpg",
+      "caption": "Dialogue",
+      "board_title": "Dialogue",
+      "lines": [
+        {
+          "text": "— Salut Lina! — Salut Adam!",
+          "style": "eq"
+        },
+        {
+          "text": "— Comment ça va? — Très bien!",
+          "style": "small"
+        }
+      ],
+      "narration": "Petit dialogue à Sousse : Salut Lina ! Salut Adam ! Comment ça va ? Très bien merci ! Et toi ? On répète ensemble. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/04_s4.mp3",
+      "image": "../img/01_s2.jpg",
+      "caption": "Sourire",
+      "board_title": "Sourire",
+      "lines": [
+        {
+          "text": "Un sourire + Bonjour",
+          "style": "eq"
+        },
+        {
+          "text": "= journée heureuse",
+          "style": "label"
+        }
+      ],
+      "narration": "N'oubliez jamais le sourire avec bonjour. Un sourire plus bonjour égale journée heureuse pour tout le monde. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/04_s5.mp3",
+      "image": "../img/01_s3.jpg",
+      "caption": "Quiz",
+      "board_title": "Quiz",
+      "lines": [
+        {
+          "text": "Que dit-on le soir à maman ?",
+          "style": "ask"
+        },
+        {
+          "text": "... réfléchis ...",
+          "style": "label"
+        },
+        {
+          "text": "Bonsoir maman !",
+          "style": "answer"
+        }
+      ],
+      "narration": "Quiz : que dit-on le soir en rentrant à la maison à maman ? Réfléchissez... On dit bonsoir maman ! Et le matin bonjour maman. Bravo. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin.",
+      "pause_after": 2
+    },
+    {
+      "audio": "../audio/04_s6.mp3",
+      "image": "../img/01_s3.jpg",
+      "caption": "Bravo !",
+      "board_title": "Défi",
+      "lines": [
+        {
+          "text": "Salue 3 personnes demain en français",
+          "style": "ask"
+        }
+      ],
+      "narration": "Défi maison : saluez trois personnes demain en français et racontez leur réaction en commentaire. Bravo les polis. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin.",
+      "confetti": true
+    }
   ]
 }

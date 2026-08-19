@@ -4,17 +4,120 @@
   "brand": "3e année · Français",
   "level": "g3",
   "subject": "french",
-  "width": 1920, "height": 1080, "fps": 24,
-  "yt": {"title": "Les sons et les lettres | Français 3e année 🇫🇷", "tags": "français, alphabet, Bravo Academy"},
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "yt": {
+    "title": "Les sons et les lettres | Français 3e année 🇫🇷"
+  },
   "scenes": [
-    {"audio": "../audio/01_s1.mp3", "image": "../img/01_s1.jpg", "caption": "A comme Avion", "board_title": "Alphabet",
-     "lines": [{"text": "A · B · C", "style": "eq"}, {"text": "Avion · Ballon · Cadeau", "style": "small"}],
-     "narration": "Bonjour ! Aujourd'hui, les sons et les lettres. A comme avion, B comme ballon, C comme cadeau."},
-    {"audio": "../audio/01_s2.mp3", "image": "../img/01_s2.jpg", "caption": "Ma première phrase", "board_title": "S + V + C",
-     "lines": [{"text": "Lina mange une pomme", "style": "eq"}, {"text": "Sujet + Verbe + Complément", "style": "label"}],
-     "narration": "Ma première phrase : Lina mange une pomme. Sujet, verbe, complément."},
-    {"audio": "../audio/01_s3.mp3", "image": "../img/01_s3.jpg", "caption": "Bravo !", "board_title": "Quiz",
-     "lines": [{"text": "B comme… ?", "style": "ask"}, {"text": "3 mots avec A", "style": "small"}],
-     "narration": "Petit quiz : B comme… ? Trouvez trois mots qui commencent par A. Bravo !", "confetti": true}
+    {
+      "audio": "../audio/01_s1.mp3",
+      "image": "../img/01_s1.jpg",
+      "caption": "Bonjour les champions !",
+      "board_title": "Alphabet",
+      "lines": [
+        {
+          "text": "A · B · C · D",
+          "style": "eq"
+        },
+        {
+          "text": "Avion · Ballon · Cadeau · Dattes",
+          "style": "small"
+        }
+      ],
+      "narration": "Bonjour les champions de Bravo Academy ! Aujourd'hui, les sons et les lettres. A comme avion et comme ananas de Gabès, B comme ballon, C comme cadeau, D comme dattes de Tozeur. Répétez avec moi. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/01_s2.mp3",
+      "image": "../img/01_s2.jpg",
+      "caption": "Je chante l'alphabet",
+      "board_title": "Chanson",
+      "lines": [
+        {
+          "text": "A B C D E F G",
+          "style": "eq"
+        },
+        {
+          "text": "chanter aide à mémoriser",
+          "style": "label"
+        }
+      ],
+      "narration": "On chante l'alphabet ensemble : A B C D E F G... Chanter aide à mémoriser vite. Chantez trois fois dans la journée. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/01_s3.mp3",
+      "image": "../img/01_s1.jpg",
+      "caption": "J'écoute le son",
+      "board_title": "Son",
+      "lines": [
+        {
+          "text": "B = /b/ · P = /p/",
+          "style": "eq"
+        },
+        {
+          "text": "oreille et bouche",
+          "style": "small"
+        }
+      ],
+      "narration": "Chaque lettre a un son. B fait /b/ comme ballon, P fait /p/ comme papillon. Mettez la main sur la gorge, sentez la vibration. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/01_s4.mp3",
+      "image": "../img/01_s2.jpg",
+      "caption": "J'écris",
+      "board_title": "Écrire",
+      "lines": [
+        {
+          "text": "A a · B b · C c",
+          "style": "eq"
+        },
+        {
+          "text": "majuscule et minuscule",
+          "style": "label"
+        }
+      ],
+      "narration": "On écrit majuscule et minuscule : A a, B b, C c. Prenez votre cahier et tracez bien les lignes. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/01_s5.mp3",
+      "image": "../img/01_s3.jpg",
+      "caption": "Quiz",
+      "board_title": "Quiz",
+      "lines": [
+        {
+          "text": "B comme ... ? trouve 2 mots",
+          "style": "ask"
+        },
+        {
+          "text": "... 3 secondes ...",
+          "style": "label"
+        },
+        {
+          "text": "Ballon, Banane, Bravo !",
+          "style": "answer"
+        }
+      ],
+      "narration": "Quiz : B comme quoi ? Trouvez deux mots qui commencent par B. Réfléchissez trois secondes... Bravo ! Ballon, banane, bonbon, Bravo Academy. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin.",
+      "pause_after": 2
+    },
+    {
+      "audio": "../audio/01_s6.mp3",
+      "image": "../img/01_s3.jpg",
+      "caption": "Bravo !",
+      "board_title": "Défi",
+      "lines": [
+        {
+          "text": "Trouve 3 mots avec A",
+          "style": "ask"
+        },
+        {
+          "text": "écris-les en commentaire",
+          "style": "small"
+        }
+      ],
+      "narration": "Défi maison : trouvez trois mots avec la lettre A et écrivez-les en commentaire. Je vous corrige. Bravo les champions. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin.",
+      "confetti": true
+    }
   ]
 }

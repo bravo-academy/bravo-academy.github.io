@@ -2,18 +2,118 @@
   "title": "Sujet + verbe + complément",
   "episode": "3",
   "brand": "3e année · Français",
-  "level": "g3", "subject": "french",
-  "width": 1920, "height": 1080, "fps": 24,
-  "yt": {"title": "Sujet verbe complément | Français 3e", "tags": "grammaire, Bravo Academy"},
+  "level": "g3",
+  "subject": "french",
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "yt": {
+    "title": "Sujet verbe complément | Français 3e"
+  },
   "scenes": [
-    {"audio": "../audio/03_s1.mp3", "image": "../img/01_s2.jpg", "caption": "La règle d'or", "board_title": "S+V+C",
-     "lines": [{"text": "Qui ? + Fait quoi ? + Quoi ?", "style": "small"}],
-     "narration": "La phrase simple : sujet, verbe, complément."},
-    {"audio": "../audio/03_s2.mp3", "image": "../img/01_s2.jpg", "caption": "Exemple", "board_title": "Exemple",
-     "lines": [{"text": "Adam lit un livre.", "style": "eq"}],
-     "narration": "Adam lit un livre. Adam est le sujet, lit le verbe, un livre le complément."},
-    {"audio": "../audio/03_s3.mp3", "image": "../img/01_s3.jpg", "caption": "Bravo !", "board_title": "Quiz",
-     "lines": [{"text": "Inventez une phrase S+V+C", "style": "ask"}],
-     "narration": "Inventez une phrase avec sujet, verbe et complément. Bravo !", "confetti": true}
+    {
+      "audio": "../audio/03_s1.mp3",
+      "image": "../img/01_s2.jpg",
+      "caption": "La règle d'or",
+      "board_title": "S+V+C",
+      "lines": [
+        {
+          "text": "Qui ? + Fait quoi ? + Quoi ?",
+          "style": "small"
+        },
+        {
+          "text": "Sujet + Verbe + Complément",
+          "style": "eq"
+        }
+      ],
+      "narration": "Bonjour ! La phrase simple a trois amis : le sujet qui fait, le verbe qui agit, le complément qui complète. Qui, fait quoi, quoi ?. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/03_s2.mp3",
+      "image": "../img/01_s2.jpg",
+      "caption": "Exemple",
+      "board_title": "Exemple",
+      "lines": [
+        {
+          "text": "Lina mange une pomme.",
+          "style": "eq"
+        },
+        {
+          "text": "S=Lina  V=mange  C=pomme",
+          "style": "label"
+        }
+      ],
+      "narration": "Exemple délicieux : Lina mange une pomme. Lina est le sujet, mange est le verbe, une pomme est le complément. On ne coupe pas la phrase. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/03_s3.mp3",
+      "image": "../img/01_s1.jpg",
+      "caption": "En Tunisie",
+      "board_title": "Exemple2",
+      "lines": [
+        {
+          "text": "Adam lit un livre à Sidi Bou Saïd.",
+          "style": "eq"
+        }
+      ],
+      "narration": "Autre exemple tunisien : Adam lit un livre à Sidi Bou Saïd. Adam sujet, lit verbe, un livre complément. À Sidi Bou Saïd précise le lieu. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/03_s4.mp3",
+      "image": "../img/01_s2.jpg",
+      "caption": "Attention !",
+      "board_title": "Ordre",
+      "lines": [
+        {
+          "text": "S+V+C = ordre fixe",
+          "style": "eq"
+        },
+        {
+          "text": "Ne mélange pas !",
+          "style": "small"
+        }
+      ],
+      "narration": "Attention, l'ordre est fixe : sujet, verbe, complément. On ne dit pas mange Lina pomme, on dit Lina mange une pomme. L'ordre, c'est la musique de la phrase. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin."
+    },
+    {
+      "audio": "../audio/03_s5.mp3",
+      "image": "../img/01_s3.jpg",
+      "caption": "Quiz",
+      "board_title": "Quiz",
+      "lines": [
+        {
+          "text": "Trouve le sujet: Sami joue au foot.",
+          "style": "ask"
+        },
+        {
+          "text": "... 3 sec ...",
+          "style": "label"
+        },
+        {
+          "text": "Sami",
+          "style": "answer"
+        }
+      ],
+      "narration": "Quiz : dans Sami joue au foot, quel est le sujet ? Réfléchissez trois secondes... C'est Sami ! Et le verbe c'est joue. Bravo. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin.",
+      "pause_after": 2
+    },
+    {
+      "audio": "../audio/03_s6.mp3",
+      "image": "../img/01_s3.jpg",
+      "caption": "Bravo !",
+      "board_title": "Défi",
+      "lines": [
+        {
+          "text": "Invente une phrase S+V+C",
+          "style": "ask"
+        },
+        {
+          "text": "avec ton prénom",
+          "style": "small"
+        }
+      ],
+      "narration": "Défi maison : inventez une phrase avec sujet verbe complément en utilisant votre prénom. Écrivez-la, je corrige. Bravo les grammairiens. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin. Répétez à voix haute, écoutez bien et écrivez la lettre dans votre cahier avec soin.",
+      "confetti": true
+    }
   ]
 }
