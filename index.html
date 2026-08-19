@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>برافو أكاديمي · استوديو المستويات والنشر</title>
+<meta name="description" content="برافو أكاديمي – قناة تعليمية للتلاميذ التونسيين من السنة الأولى إلى السادسة أساسي، كل يوم مادة ثابتة الساعة 18:00">
 <link rel="icon" href="assets/brand/logo_bravo.png">
 <style>
   :root{
@@ -44,6 +45,13 @@
 
   .stats-bar{max-width:1100px;margin:10px auto;background:#fff;border:3px solid var(--ink);border-radius:16px;padding:12px 20px;box-shadow:4px 4px 0 var(--ink);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
   .stats-bar h2{font-size:1.1rem;color:var(--ink)}
+  .stats-bar small{font-weight:700;color:#666}
+
+  /* Loading / Error */
+  .notice{max-width:1100px;margin:14px auto;padding:16px 18px;border:3px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);font-weight:800;text-align:center;display:none}
+  .notice.show{display:block}
+  .notice-loading{background:#fffbe6;border-color:var(--sun);color:var(--ink)}
+  .notice-error{background:#fff0f0;border-color:var(--coral);color:#a11}
 
   main{max-width:1100px;margin:0 auto;padding:10px 16px 80px}
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
@@ -59,6 +67,9 @@
   .ok-tag{background:var(--green);color:#fff;font-size:.75rem;padding:3px 8px;border-radius:20px;font-weight:800;border:1.5px solid var(--ink)}
   .plan-tag{background:#aaa;color:#fff;font-size:.75rem;padding:3px 8px;border-radius:20px;font-weight:800;border:1.5px solid var(--ink)}
 
+  .thumb-preview{width:100%;aspect-ratio:16/9;object-fit:cover;border:3px solid var(--ink);border-radius:12px;margin:8px 0 8px;background:#000;display:block}
+  .thumb-preview:not([src]), .thumb-preview[src=""]{display:none}
+
   .action-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
   .btn{
     cursor:pointer;display:inline-flex;align-items:center;gap:4px;background:var(--teal);color:#fff;
@@ -68,6 +79,10 @@
   .btn:hover{transform:translateY(-1px);box-shadow:3px 3px 0 var(--ink)}
   .btn-short{background:var(--coral)}
   .btn-pub{background:var(--sun);color:var(--ink)}
+  .btn-dl{background:var(--ink);color:var(--sun)}
+  .btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:2px 2px 0 var(--ink)}
+
+  .empty-msg{padding:14px;background:#f9f9f9;border:2px dashed #bbb;border-radius:12px;text-align:center;font-weight:700;color:#666;font-size:.9rem;margin-top:10px}
 
   /* Modal Overlay */
   .modal-bg{
@@ -87,6 +102,7 @@
   .modal-close:hover{background:#d43f32}
 
   video{width:100%;border:3px solid var(--ink);border-radius:14px;background:#000;margin-top:12px}
+  .video-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;justify-content:center}
 
   .pub-tabs{display:flex;gap:8px;margin:16px 0;border-bottom:3px solid var(--ink);padding-bottom:8px}
   .pub-tab{
@@ -115,12 +131,13 @@
     font-weight:800;border:3px solid var(--sun);box-shadow:0 6px 20px rgba(0,0,0,.3);
     z-index:10000;display:none;
   }
+  footer{max-width:1100px;margin:20px auto;padding:16px;text-align:center;font-weight:700;color:#666;font-size:.85rem}
 </style>
 </head>
 <body>
 
 <header>
-  <img src="assets/brand/logo_bravo.png" alt="برافو أكاديمي">
+  <img src="assets/brand/logo_bravo.png" alt="برافو أكاديمي" onerror="this.style.display='none'">
   <div><span class="badge">@BravoAcademyTN · 🇹🇳 · مصنوع للأطفال ✅</span></div>
   <h1>برافو أكاديمي · Bravo Academy</h1>
   <p style="margin-top:10px;font-weight:700;color:var(--blue-d)">استوديو النشر والمحتوى الرقمي · البرنامج التونسي الرسمي (السنة 1 → 6 أساسي)</p>
@@ -142,27 +159,34 @@
 <div class="tabs" id="tabs"></div>
 
 <div class="stats-bar">
-  <h2 id="level-title">السنة الثالثة أساسي</h2>
+  <h2 id="level-title">جاري التحميل…</h2>
   <div id="level-progress" style="font-weight:800;color:var(--teal)"></div>
 </div>
+
+<div id="loading-notice" class="notice notice-loading show">⏳ جاري تحميل الكتالوج <code>catalog.json</code> …</div>
+<div id="error-notice" class="notice notice-error"></div>
 
 <main>
   <div id="subjects" class="grid"></div>
 </main>
 
 <!-- Video Player Modal -->
-<div class="modal-bg" id="video-modal">
+<div class="modal-bg" id="video-modal" onclick="if(event.target===this) closeModal('video-modal')">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('video-modal')">✕</button>
+    <button class="modal-close" onclick="closeModal('video-modal')" aria-label="إغلاق">✕</button>
     <h3 id="video-modal-title" style="margin-bottom:8px">مشاهدة الحلقة</h3>
-    <video id="video-player" controls autoplay></video>
+    <video id="video-player" controls playsinline preload="metadata"></video>
+    <div class="video-actions">
+      <a id="video-download" class="btn btn-dl" download style="display:none">⬇️ تحميل الفيديو</a>
+      <a id="video-short-link" class="btn btn-short" target="_blank" style="display:none">📱 فتح Short</a>
+    </div>
   </div>
 </div>
 
 <!-- Publishing Settings Modal -->
-<div class="modal-bg" id="pub-modal">
+<div class="modal-bg" id="pub-modal" onclick="if(event.target===this) closeModal('pub-modal')">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('pub-modal')">✕</button>
+    <button class="modal-close" onclick="closeModal('pub-modal')" aria-label="إغلاق">✕</button>
     <h3 id="pub-modal-title" style="margin-bottom:6px">📢 إعدادات النشر للتصدير</h3>
     <p style="font-size:.85rem;color:#555">انسخ البيانات الجاهزة للتنزيل والنشر مباشرة على يوتيوب وفيسبوك.</p>
     
@@ -195,12 +219,21 @@
         </div>
       </div>
       <div class="field-group">
+        <label>الصورة المصغّرة (Thumbnail):</label>
+        <div class="field-row">
+          <input type="text" id="yt-thumb-input" readonly placeholder="levels/g3/.../thumbs/xxx.jpg">
+          <button class="copy-btn" onclick="copyField('yt-thumb-input')">📋 نسخ</button>
+          <a id="thumb-download-btn" class="copy-btn" style="background:var(--blue);text-decoration:none;justify-content:center;display:none" download>⬇️ تحميل</a>
+        </div>
+        <img id="yt-thumb-preview" alt="معاينة الثمبنيل" style="width:100%;max-width:340px;border:2px solid var(--ink);border-radius:10px;margin-top:8px;display:none">
+      </div>
+      <div class="field-group">
         <label>ملف الترجمة والنسخ النصي (SRT Subtitles):</label>
         <div class="field-row">
           <textarea id="yt-srt-input" readonly></textarea>
           <div style="display:flex;flex-direction:column;gap:6px">
             <button class="copy-btn" onclick="copyField('yt-srt-input')">📋 نسخ النص</button>
-            <a id="srt-download-btn" class="copy-btn" style="background:var(--blue);text-decoration:none;justify-content:center" download>⬇️ تحميل SRT</a>
+            <a id="srt-download-btn" class="copy-btn" style="background:var(--blue);text-decoration:none;justify-content:center;display:none" download>⬇️ تحميل SRT</a>
           </div>
         </div>
       </div>
@@ -235,26 +268,32 @@
 </div>
 
 <div id="toast">تم النسخ بنجاح! 📋</div>
+<footer>© 2026 برافو أكاديمي · Bravo Academy — مصنوع بحب للأطفال التونسيين · <a href="https://github.com/bravo-academy/bravo-academy.github.io" target="_blank">GitHub</a></footer>
 
 <script>
 let CATALOG = null;
 let currentLevel = 'g3';
 
 async function init(){
+  const loading = document.getElementById('loading-notice');
+  const errorBox = document.getElementById('error-notice');
   try {
-    const res = await fetch('catalog.json');
-    if(res.ok){
-      CATALOG = await res.json();
-    }
+    const res = await fetch('catalog.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    CATALOG = await res.json();
+    loading.classList.remove('show');
   } catch(e){
     console.error("Catalog fetch error:", e);
+    loading.classList.remove('show');
+    errorBox.textContent = '⚠️ تعذّر تحميل catalog.json — تأكّد أن الموقع يُعرض عبر خادم (GitHub Pages) وأن الملف موجود. التفاصيل: ' + (e.message||e);
+    errorBox.classList.add('show');
   }
   renderTabs();
   renderLevel();
 }
 
 function renderTabs(){
-  const levels = CATALOG ? CATALOG.levels : [
+  const fallback = [
     {id:'g1', title_ar:'السنة الأولى'},
     {id:'g2', title_ar:'السنة الثانية'},
     {id:'g3', title_ar:'السنة الثالثة'},
@@ -262,6 +301,7 @@ function renderTabs(){
     {id:'g5', title_ar:'السنة الخامسة'},
     {id:'g6', title_ar:'السنة السادسة'}
   ];
+  const levels = (CATALOG && CATALOG.levels && CATALOG.levels.length) ? CATALOG.levels : fallback;
   document.getElementById('tabs').innerHTML = levels.map(l =>
     `<button class="tab ${l.id===currentLevel?'on':''}" onclick="selectLevel('${l.id}')">${l.title_ar}</button>`
   ).join('');
@@ -274,64 +314,110 @@ function selectLevel(id){
 }
 
 function renderLevel(){
-  if(!CATALOG) return;
-  const lvl = CATALOG.levels.find(l => l.id === currentLevel);
-  if(!lvl) return;
+  const titleEl = document.getElementById('level-title');
+  const progressEl = document.getElementById('level-progress');
+  const subjectsBox = document.getElementById('subjects');
+  const errorBox = document.getElementById('error-notice');
 
-  document.getElementById('level-title').innerText = lvl.title_ar + " أساسي";
+  if(!CATALOG){
+    titleEl.innerText = 'السنة الثالثة أساسي';
+    progressEl.innerText = '';
+    subjectsBox.innerHTML = `<div class="empty-msg">⚠️ الكتالوج غير متاح حالياً. إذا كنت تفتح الملف مباشرة <code>file://</code> جرّب تشغيل <code>python3 -m http.server</code>.</div>`;
+    return;
+  }
+  const lvl = CATALOG.levels.find(l => l.id === currentLevel);
+  if(!lvl){
+    titleEl.innerText = 'المستوى غير موجود';
+    subjectsBox.innerHTML = '';
+    return;
+  }
+
+  titleEl.innerText = lvl.title_ar + " أساسي";
 
   let totalLessons = 0;
   let readyLessons = 0;
+  lvl.subjects.forEach(sub => {
+    totalLessons += sub.lessons.length;
+    readyLessons += sub.lessons.filter(l => l.status === 'ready').length;
+  });
 
-  const subjectsBox = document.getElementById('subjects');
+  // حماية قسمة على صفر
+  const overallPct = totalLessons > 0 ? Math.round((readyLessons/totalLessons)*100) : 0;
+  progressEl.innerText = totalLessons>0 ? `إجمالي المنجز: ${readyLessons} من ${totalLessons} حلقة (${overallPct}%)` : 'لا توجد دروس بعد';
+
+  // إخفاء رسالة الخطأ إذا نجح التحميل
+  if(CATALOG) errorBox.classList.remove('show');
+
   subjectsBox.innerHTML = lvl.subjects.map(sub => {
     const total = sub.lessons.length;
     const ready = sub.lessons.filter(l => l.status === 'ready').length;
-    totalLessons += total;
-    readyLessons += ready;
-
     const pct = total > 0 ? Math.round((ready / total) * 100) : 0;
 
     const lessonsHtml = sub.lessons.map(l => {
       const isReady = l.status === 'ready';
+      const safeTitle = escapeHtml(l.title);
+      // بطاقة الدرس مع الثمبنيل
       return `
         <div class="lesson-item">
           <div class="lesson-header">
-            <span class="lesson-title"><b>الدرس ${l.id}:</b> ${l.title}</span>
+            <span class="lesson-title"><b>الدرس ${escapeHtml(l.id)}:</b> ${safeTitle}</span>
             <span class="${isReady ? 'ok-tag' : 'plan-tag'}">${isReady ? 'منجز ✅' : 'متبقّي ⏳'}</span>
           </div>
+          ${isReady && l.thumb_url ? `<img class="thumb-preview" src="${escapeAttr(l.thumb_url)}" alt="ثمبنيل ${escapeAttr(l.title)}" loading="lazy" onerror="this.style.display='none'">` : ''}
+          ${isReady && !l.thumb_url && l.video_url ? `<div class="empty-msg" style="padding:8px">🎬 الفيديو جاهز (الثمبنيل سيُضاف قريباً)</div>` : ''}
           ${isReady ? `
             <div class="action-btns">
-              <button class="btn" onclick="playVideo('${escapeJs(l.title)}', '${escapeJs(l.video_url)}')">🎬 مشاهدة الفيديو</button>
-              ${l.short_url ? `<button class="btn btn-short" onclick="playVideo('${escapeJs(l.title)} (Short)', '${escapeJs(l.short_url)}')">📱 Short</button>` : ''}
-              <button class="btn btn-pub" onclick="openPubModal('${lvl.id}', '${sub.id}', '${l.id}')">📢 إعدادات النشر</button>
+              <button class="btn" onclick="playVideo('${escapeJs(l.title)}', '${escapeJs(l.video_url)}', '${escapeJs(l.thumb_url||'')}')">🎬 مشاهدة</button>
+              ${l.short_url ? `<button class="btn btn-short" onclick="playVideo('${escapeJs(l.title)} (Short)', '${escapeJs(l.short_url)}', '${escapeJs(l.thumb_url||'')}')">📱 Short</button>` : ''}
+              <a class="btn btn-dl" href="${escapeAttr(l.video_url)}" download>⬇️ تحميل</a>
+              <button class="btn btn-pub" onclick="openPubModal('${escapeJs(lvl.id)}', '${escapeJs(sub.id)}', '${escapeJs(l.id)}')">📢 نشر</button>
             </div>
-          ` : ''}
+          ` : `<div class="empty-msg">📚 هذا الدرس في مرحلة الإعداد — سيظهر هنا عند جاهزيته. راجع <code>curriculum/${escapeHtml(lvl.id)}_${escapeHtml(sub.id)}.json</code></div>`}
         </div>
       `;
     }).join('');
 
     return `
       <article class="card">
-        <h3><span>${sub.title_ar}</span> <small style="font-size:.85rem;color:var(--blue-d)">${ready} / ${total}</small></h3>
+        <h3><span>${escapeHtml(sub.title_ar)}</span> <small style="font-size:.85rem;color:var(--blue-d)">${ready} / ${total}</small></h3>
         <div class="bar"><i style="width:${pct}%"></i></div>
-        <div>${lessonsHtml}</div>
+        <div>${lessonsHtml || '<div class="empty-msg">لا دروس بعد</div>'}</div>
       </article>
     `;
   }).join('');
-
-  document.getElementById('level-progress').innerText = `إجمالي المنجز: ${readyLessons} من ${totalLessons} حلقة (${Math.round((readyLessons/totalLessons)*100)}%)`;
 }
 
+// هروب آمن للنص داخل JS string محاطة بـ ' '
 function escapeJs(str){
-  return (str || '').replace(/'/g, "\\'").replace(/"/g, "&quot;");
+  return (str || '').replace(/\\/g, "\\\\").replace(/'/g, "\\'").replace(/"/g, '\\"').replace(/\n/g, "\\n").replace(/\r/g, "\\r");
+}
+function escapeHtml(str){
+  return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escapeAttr(str){
+  return (str || '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;');
 }
 
-function playVideo(title, url){
+function playVideo(title, url, thumb){
+  if(!url){ showToast('⚠️ الفيديو غير متوفر بعد'); return; }
   document.getElementById('video-modal-title').innerText = title;
   const player = document.getElementById('video-player');
+  // poster من الثمبنيل إن وُجد
+  if(thumb) player.poster = thumb; else player.removeAttribute('poster');
   player.src = url;
+  player.load();
+  // روابط التحميل
+  const dl = document.getElementById('video-download');
+  dl.href = url;
+  dl.style.display = 'inline-flex';
+  dl.setAttribute('download','');
+  const sh = document.getElementById('video-short-link');
+  // إخفاء زر Short الافتراضي في مودال الفيديو العادي
+  sh.style.display = 'none';
   document.getElementById('video-modal').classList.add('active');
+  // محاولة تشغيل مع احترام سياسة المتصفح
+  const p = player.play();
+  if(p && p.catch) p.catch(()=>{});
 }
 
 function closeModal(id){
@@ -339,13 +425,16 @@ function closeModal(id){
   if(id === 'video-modal'){
     const player = document.getElementById('video-player');
     player.pause();
-    player.src = '';
+    player.removeAttribute('src');
+    player.removeAttribute('poster');
+    player.load();
   }
 }
 
 let activePubLesson = null;
 
 function openPubModal(lvlId, subId, lessonId){
+  if(!CATALOG) return;
   const lvl = CATALOG.levels.find(l => l.id === lvlId);
   const sub = lvl ? lvl.subjects.find(s => s.id === subId) : null;
   const lesson = sub ? sub.lessons.find(l => l.id === lessonId) : null;
@@ -360,6 +449,7 @@ function openPubModal(lvlId, subId, lessonId){
   document.getElementById('yt-desc-input').value = lesson.youtube.description || '';
   document.getElementById('yt-tags-input').value = lesson.youtube.tags || '';
   document.getElementById('yt-srt-input').value = lesson.srt_content || '';
+  document.getElementById('yt-thumb-input').value = lesson.thumb_url || '';
 
   const srtBtn = document.getElementById('srt-download-btn');
   if(lesson.srt_url){
@@ -367,6 +457,18 @@ function openPubModal(lvlId, subId, lessonId){
     srtBtn.style.display = 'inline-flex';
   } else {
     srtBtn.style.display = 'none';
+  }
+  const thumbBtn = document.getElementById('thumb-download-btn');
+  const thumbPrev = document.getElementById('yt-thumb-preview');
+  if(lesson.thumb_url){
+    thumbBtn.href = lesson.thumb_url;
+    thumbBtn.style.display = 'inline-flex';
+    thumbPrev.src = lesson.thumb_url;
+    thumbPrev.style.display = 'block';
+    thumbPrev.onerror = ()=> thumbPrev.style.display='none';
+  } else {
+    thumbBtn.style.display = 'none';
+    thumbPrev.style.display = 'none';
   }
 
   // Facebook
@@ -392,24 +494,35 @@ function switchPubTab(type){
   }
 }
 
-function copyField(elementId){
+async function copyField(elementId){
   const el = document.getElementById(elementId);
   if(!el) return;
-  el.select();
-  navigator.clipboard.writeText(el.value).then(() => {
+  const text = el.value;
+  try{
+    await navigator.clipboard.writeText(text);
     showToast('تم النسخ إلى الحافظة بنجاح! 📋');
-  }).catch(() => {
-    document.execCommand('copy');
-    showToast('تم النسخ إلى الحافظة! 📋');
-  });
+  }catch{
+    el.focus(); el.select();
+    try{ document.execCommand('copy'); showToast('تم النسخ إلى الحافظة! 📋'); }
+    catch{ showToast('⚠️ انسخ يدوياً: Ctrl+C'); }
+  }
 }
 
 function showToast(msg){
   const t = document.getElementById('toast');
   t.innerText = msg;
   t.style.display = 'block';
-  setTimeout(() => { t.style.display = 'none'; }, 2200);
+  clearTimeout(t._hide);
+  t._hide = setTimeout(() => { t.style.display = 'none'; }, 2200);
 }
+
+// إغلاق بالـ ESC + منع تمرير الخلفية
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape'){
+    closeModal('video-modal');
+    closeModal('pub-modal');
+  }
+});
 
 window.onload = init;
 </script>
